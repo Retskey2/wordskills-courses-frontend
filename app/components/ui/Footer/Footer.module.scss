@@ -1,0 +1,29 @@
+.footer {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 60px 100px 0 60px;
+	height: 500px;
+	background-color: #0048ba;
+	ul {
+		li {
+			margin-top: 16px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 19px;
+
+			color: #ffffff;
+			&:first-child {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 28px;
+			}
+		}
+	}
+
+	.logo {
+		position: absolute;
+		bottom: 60px;
+		right: 120px;
+	}
+}

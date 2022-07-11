@@ -1,0 +1,28 @@
+.button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10.591px 28.2374px 10.591px 28.2427px;
+	gap: 8.83px;
+
+	width: 194.48px;
+	height: 58.18px;
+
+	background: #0048ba;
+	border-radius: 4.51799px;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 36px;
+
+	letter-spacing: 0.02em;
+
+	color: white;
+
+	&.outlined {
+		background: white;
+		color: #0048ba;
+		border: 1px solid #003ecb;
+	}
+}

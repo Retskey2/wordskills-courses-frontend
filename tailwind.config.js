@@ -13,6 +13,9 @@ module.exports = {
 			primary,
 			black: colors.black,
 			white: colors.white,
+			blue: {
+				600: '#003ECB',
+			},
 			gray: {
 				200: '#F7F7F7',
 				300: '#d9dae8',
@@ -114,8 +117,8 @@ module.exports = {
 				},
 			}),
 				addUtilities({
-					'.text-shadow': {
-						textShadow: '1px 1px rgba(0, 0, 0, 0.4)',
+					'.shadow-direction': {
+						boxShadow: '0px 8px 100px rgba(0, 0, 0, 0.05)'
 					},
 
 					'.outline-border-none': {

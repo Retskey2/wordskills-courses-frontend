@@ -5,12 +5,20 @@ import styles from './Button.module.scss'
 
 interface ButtonProps {
 	outlined?: boolean
+	className?: string
 }
 
-const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, outlined }) => {
+const Button: FC<PropsWithChildren<ButtonProps>> = ({
+	children,
+	outlined,
+	className,
+}) => {
 	return (
 		<button
-			className={outlined ? cn(styles.button, styles.outlined) : styles.button}
+			className={cn(
+				outlined ? cn(styles.button, styles.outlined) : styles.button,
+				className
+			)}
 		>
 			{children}
 		</button>

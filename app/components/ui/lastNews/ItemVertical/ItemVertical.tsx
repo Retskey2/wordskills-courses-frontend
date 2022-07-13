@@ -15,12 +15,14 @@ const ItemVertical: FC<ItemProps> = ({ image, date, title, description }) => {
 		<div className="flex mt-4 bg-white">
 			<Image width={350} height={295} src={image} alt={title} />
 			<div className="flex flex-col px-12 py-10 w-full">
-				<div className="flex justify-between">
+				<div className="flex justify-between text-gray-500 mb-3">
 					<div>23.12.2022</div>
 					<div>09:00</div>
 				</div>
-				<h2>Анализ датасета</h2>
-				<p>Бесплатный онлайн-урок по разработке telegram-бота на python</p>
+				<h2 className="mb-3 font-medium text-2xl">Анализ датасета</h2>
+				<p className="mb-8 text-gray-500 mb-3">
+					Бесплатный онлайн-урок по разработке telegram-бота на python
+				</p>
 				<Button>Присоединиться</Button>
 			</div>
 		</div>

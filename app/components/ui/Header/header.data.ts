@@ -3,27 +3,27 @@ export const HeaderContent:IHeader = {
     title: 'IHeader',
     items: [
     {
-        link: '/discovery',
+        link: '/courses',
         title: 'Курсы',
     },
     {
-        link: '/fresh',
+        link: '/projects',
         title: 'Проекты',
     },
     {
-        link: '/trending',
+        link: '/teachers',
         title: 'Преподаватели',
     },
     {
-        link: '/trending',
+        link: '/about',
         title: 'О нас',
     },
     {
-        link: '/trending',
+        link: '/contacts',
         title: 'Контакты',
     },
     {
-        link: '/trending',
+        link: '/documents',
         title: 'Документы',
     }],
     

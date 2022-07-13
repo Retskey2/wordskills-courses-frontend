@@ -1,16 +1,42 @@
 import Image from 'next/image'
 import { FC } from 'react'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 import { Meta } from 'utills/meta/Meta'
 
-import { LastNews } from '@/components/ui/lastNews/LastNews'
+import Button from '@/components/ui/Button/Button'
+import CardTeacher from '@/components/ui/CardTeacher/CardTeacher'
+import DirectionItem from '@/components/ui/DirectionItem/DirectionItem'
+import LastNews from '@/components/ui/lastNews/LastNews'
 
 import illustration from '@/assets/image/Illustration.svg'
 import arrow from '@/assets/image/Vector.svg'
 import book from '@/assets/image/book-icon.svg'
 import chalkboard from '@/assets/image/chalkboard-icon.svg'
 import diploma from '@/assets/image/diploma-icon.svg'
+import TeacherPhoto from '@/assets/image/teacher-photo.png'
 
 import styles from './Home.module.scss'
+
+const responsive = {
+	superLargeDesktop: {
+		// the naming can be any, depends on you.
+		breakpoint: { max: 4000, min: 3000 },
+		items: 2,
+	},
+	desktop: {
+		breakpoint: { max: 3000, min: 1024 },
+		items: 2,
+	},
+	tablet: {
+		breakpoint: { max: 1024, min: 464 },
+		items: 2,
+	},
+	mobile: {
+		breakpoint: { max: 464, min: 0 },
+		items: 1,
+	},
+}
 
 const Home: FC = () => {
 	return (
@@ -65,7 +91,53 @@ const Home: FC = () => {
 						</div>
 					</div>
 				</div>
-				<LastNews variant="vertical" />
+				<LastNews />
+				<div className={styles.wrapper_content}>
+					<div>
+						<h1 className="text-blue-600 text-4xl font-semibold">
+							Отзывы наших студентов
+						</h1>
+						<p className="text-gray-500 mb-6 mt-4 max-w-2xl text-2xl font-normal">
+							Подготовка по самым популярным и актуальным направлениям 2022
+							года.
+						</p>
+
+						<Carousel
+							dotListClass="custom-dot-list-style"
+							showDots={true}
+							responsive={responsive}
+							ssr={true}
+							infinite={true}
+							draggable={false}
+						>
+							<CardTeacher image={TeacherPhoto} />
+							<CardTeacher image={TeacherPhoto} />
+							<CardTeacher image={TeacherPhoto} />
+						</Carousel>
+						<Button className="m-auto mt-14" outlined>
+							Оставить отзыв
+						</Button>
+						<div className="m-auto py-24">
+							<h1 className="text-blue-600 text-center text-4xl font-semibold">
+								Подготовка по направлениям
+							</h1>
+							<p className="text-3xl font-normal mt-2 text-center">
+								Подготовка по направлениям
+							</p>
+							<div className="flex">
+								<div className="inline-grid grid-cols-2 content-center m-auto">
+									<DirectionItem />
+									<DirectionItem />
+									<DirectionItem />
+									<DirectionItem />
+									<DirectionItem />
+									<DirectionItem />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<LastNews horizontal />
 			</div>
 		</Meta>
 	)

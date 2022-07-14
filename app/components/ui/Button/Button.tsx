@@ -1,22 +1,28 @@
 import cn from 'classnames'
 import { FC, PropsWithChildren } from 'react'
 
+import arrow from '@/assets/image/Vector.svg'
+
 import styles from './Button.module.scss'
 
 interface ButtonProps {
-	outlined?: boolean
+	variant: 'blue' | 'white' | 'arrow'
 	className?: string
 }
 
 const Button: FC<PropsWithChildren<ButtonProps>> = ({
 	children,
-	outlined,
+	variant,
 	className,
 }) => {
 	return (
 		<button
 			className={cn(
-				outlined ? cn(styles.button, styles.outlined) : styles.button,
+				{
+					[styles.white]: variant === 'white',
+					[styles.arrow]: variant === 'arrow',
+				},
+				styles.button,
 				className
 			)}
 		>

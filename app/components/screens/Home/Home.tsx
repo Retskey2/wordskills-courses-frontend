@@ -7,6 +7,7 @@ import { Meta } from 'utills/meta/Meta'
 import Button from '@/components/ui/Button/Button'
 import CardTeacher from '@/components/ui/CardTeacher/CardTeacher'
 import DirectionItem from '@/components/ui/DirectionItem/DirectionItem'
+import Heading from '@/components/ui/Heading/Heading'
 import LastNews from '@/components/ui/lastNews/LastNews'
 
 import illustration from '@/assets/image/Illustration.svg'
@@ -15,6 +16,8 @@ import book from '@/assets/image/book-icon.svg'
 import chalkboard from '@/assets/image/chalkboard-icon.svg'
 import diploma from '@/assets/image/diploma-icon.svg'
 import TeacherPhoto from '@/assets/image/teacher-photo.png'
+
+import SubHeading from '../../ui/Heading/SubHeading'
 
 import styles from './Home.module.scss'
 
@@ -42,6 +45,7 @@ const Home: FC = () => {
 	return (
 		<Meta title="Главная" description="Обучим вас нужными навыками">
 			<div>
+				{/* Верхний блок*/}
 				<div className={styles.wrapper_header}>
 					<div className={styles.content}>
 						<div className={styles.label}>
@@ -49,59 +53,59 @@ const Home: FC = () => {
 							<h2>
 								Школа подготовки по стандартам <br /> WorldSkills
 							</h2>
-							<button>
+							<Button variant="arrow">
 								<span>Подробнее</span>
 								<Image src={arrow} alt="arrow"></Image>
-							</button>
+							</Button>
 						</div>
 						<div className="mt-36">
 							<Image src={illustration} alt="illustration" />
 						</div>
 					</div>
 				</div>
-				<div className={styles.wrapper_content}>
-					<div className={styles.task}>
-						<h1>Задача</h1>
-						<p>
+				{/* Блок контентной части*/}
+				<div className="w-full max-w-[1260px] mt-28 mx-auto">
+					<div>
+						<Heading title="ЗАДАЧА" small />
+						<SubHeading className="max-w-4xl">
 							Наша Миссия - раскрыть таланты и дать возможность проявится
 							каждому
-						</p>
-						<div className={styles.advantages}>
-							<div>
-								<Image src={book} alt="book"></Image>
-								<p>
-									Легкое и простое обучение, в удобной для вас форме.
-									Индивидуальное расписание для каждого.
-								</p>
-							</div>
-							<div>
-								<Image src={chalkboard} alt="chalkboard"></Image>
-								<p>
-									Поддержка преподавателей в течении всего процесса обучение.
-									Помощь при сдаче и подготовке к экзаменам.
-								</p>
-							</div>
-							<div>
-								<Image src={diploma} alt="diploma"></Image>
-								<p>
-									Сертификат об окончании школы подготовки по стандратам
-									WorldSkills.
-								</p>
-							</div>
+						</SubHeading>
+					</div>
+					<div className="flex flex-row justify-between mt-[60px] mb-[120px]">
+						<div className="max-w-xs text-base text-gray-500">
+							<Image src={book} alt="book"></Image>
+							<p className="mt-4">
+								Легкое и простое обучение, в удобной для вас форме.
+								Индивидуальное расписание для каждого.
+							</p>
+						</div>
+						<div className="max-w-xs text-base text-gray-500">
+							<Image src={chalkboard} alt="chalkboard"></Image>
+							<p className="mt-4">
+								Поддержка преподавателей в течении всего процесса обучение.
+								Помощь при сдаче и подготовке к экзаменам.
+							</p>
+						</div>
+						<div className="max-w-xs text-base text-gray-500">
+							<Image src={diploma} alt="diploma"></Image>
+							<p className="mt-4">
+								Сертификат об окончании школы подготовки по стандратам
+								WorldSkills.
+							</p>
 						</div>
 					</div>
 				</div>
 				<LastNews />
-				<div className={styles.wrapper_content}>
+				<div className="w-full max-w-[1260px] mt-28 mx-auto">
 					<div>
-						<h1 className="text-blue-600 text-4xl font-semibold">
-							Отзывы наших студентов
-						</h1>
-						<p className="text-gray-500 mb-6 mt-4 max-w-2xl text-2xl font-normal">
+						<Heading title="Отзывы наших студентов" />
+						<SubHeading className="max-w-4xl mb-6" small>
 							Подготовка по самым популярным и актуальным направлениям 2022
 							года.
-						</p>
-
+						</SubHeading>
+					</div>
+					<div>
 						<Carousel
 							dotListClass="custom-dot-list-style"
 							showDots={true}
@@ -114,25 +118,25 @@ const Home: FC = () => {
 							<CardTeacher image={TeacherPhoto} />
 							<CardTeacher image={TeacherPhoto} />
 						</Carousel>
-						<Button className="m-auto mt-14" outlined>
+						<Button className="m-auto mt-14" variant="white">
 							Оставить отзыв
 						</Button>
-						<div className="m-auto py-24">
-							<h1 className="text-blue-600 text-center text-4xl font-semibold">
+					</div>
+					<div className="m-auto py-24">
+						<div>
+							<Heading title="Подготовка по направлениям" center />
+							<SubHeading className="max-w-4xl mb-6 m-auto" small center>
 								Подготовка по направлениям
-							</h1>
-							<p className="text-3xl font-normal mt-2 text-center">
-								Подготовка по направлениям
-							</p>
-							<div className="flex">
-								<div className="inline-grid grid-cols-2 content-center m-auto">
-									<DirectionItem />
-									<DirectionItem />
-									<DirectionItem />
-									<DirectionItem />
-									<DirectionItem />
-									<DirectionItem />
-								</div>
+							</SubHeading>
+						</div>
+						<div className="flex">
+							<div className="inline-grid grid-cols-2 content-center m-auto">
+								<DirectionItem />
+								<DirectionItem />
+								<DirectionItem />
+								<DirectionItem />
+								<DirectionItem />
+								<DirectionItem />
 							</div>
 						</div>
 					</div>

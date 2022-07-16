@@ -1,0 +1,15 @@
+.cardTeacher {
+	@apply max-w-[550px] flex p-7 gap-6 justify-center bg-white;
+	.old {
+		@apply text-sm text-gray-500;
+	}
+	.star {
+		@apply text-2xl;
+	}
+	p {
+		@apply text-sm max-w-[250px] leading-5;
+	}
+	a {
+		@apply text-gray-500 mt-4;
+	}
+}

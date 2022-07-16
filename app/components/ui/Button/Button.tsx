@@ -1,18 +1,16 @@
 import cn from 'classnames'
 import { FC, PropsWithChildren } from 'react'
 
-import arrow from '@/assets/image/Vector.svg'
-
 import styles from './Button.module.scss'
 
-interface ButtonProps {
-	variant: 'blue' | 'white' | 'arrow'
+interface IButton {
+	variant?: 'white' | 'arrow'
 	className?: string
 }
 
-const Button: FC<PropsWithChildren<ButtonProps>> = ({
+const Button: FC<PropsWithChildren<IButton>> = ({
 	children,
-	variant,
+	variant = 'blue',
 	className,
 }) => {
 	return (

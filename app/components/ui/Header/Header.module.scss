@@ -1,20 +1,23 @@
-.wrapper {
-	z-index: 99;
-	font-family: 'Roboto';
-	margin: 25px auto;
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	width: 100%;
-	font-size: 16px;
-	color: white;
-	font-weight: 700;
-	line-height: 19px;
-	ul {
-		display: grid;
-		grid-template-columns: repeat(6, 1fr);
-		text-align: center;
-		gap: 20px;
+.header {
+	@apply z-50 mx-auto p-8 flex items-center justify-evenly w-full text-white font-bold;
+}
+
+.smash {
+	@apply relative bg-blue-600 text-black;
+}
+.glass {
+	@apply absolute;
+}
+
+.ul {
+	@apply flex;
+	> li {
+		@apply px-6 border-r-4 border-r-transparent transition-colors items-center align-middle;
+		> a {
+			@apply flex items-center text-white  cursor-pointer;
+		}
+		&.active {
+			@apply underline;
+		}
 	}
 }

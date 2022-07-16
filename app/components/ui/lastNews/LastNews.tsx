@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { FC } from 'react'
 
+import Heading from '@/components/ui/Heading/Heading'
+
 import arrow from '@/assets/image/arrow-show.svg'
 import navigator from '@/assets/image/navigator-icon.svg'
 import NewsHorizontal from '@/assets/image/news-horizontal.jpg'
@@ -39,16 +41,14 @@ let dataWNewsHorizontal = [
 
 const LastNews: FC<NewsProps> = ({ horizontal }) => {
 	return (
-		<div className="w-full bg-gray-200 pt-12 pb-24">
-			<div className="m-auto max-w-[1260px]">
-				<div className="mb-10">
+		<div className={styles.newsBlock}>
+			<section>
+				<div className={styles.article}>
 					<Image src={navigator} alt="navigator" />
-					<span className="ml-2 text-blue-600 font-semibold text-[40px]">
-						Последние события
-					</span>
+					<Heading title="Последние события" className="ml-2" />
 				</div>
 				{horizontal ? (
-					<div className="flex justify-between gap-4">
+					<div className={styles.item}>
 						{dataWNewsHorizontal.map((data) => (
 							<ItemHorizontal key={data.id} image={data.image} />
 						))}
@@ -60,17 +60,15 @@ const LastNews: FC<NewsProps> = ({ horizontal }) => {
 						))}
 					</div>
 				)}
-				<div className="flex justify-end mt-12 items-center">
+				<div className={styles.viewAll}>
 					<Link href="/">
 						<a>
-							<span className="text-blue-600 font-medium mr-5 text-2xl">
-								Посмотреть все
-							</span>
+							<span>Посмотреть все</span>
 							<Image src={arrow} alt="arrow" />
 						</a>
 					</Link>
 				</div>
-			</div>
+			</section>
 		</div>
 	)
 }

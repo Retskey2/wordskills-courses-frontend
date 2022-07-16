@@ -1,0 +1,18 @@
+.newsBlock {
+	@apply w-full bg-gray-200 pt-12 pb-24;
+	section {
+		@apply m-auto max-w-[1260px];
+		.article {
+			@apply mb-10 flex items-center;
+		}
+		.item {
+			@apply flex justify-between gap-4;
+		}
+		.viewAll {
+			@apply flex justify-end mt-12 items-center;
+			span {
+				@apply text-blue-600 font-medium mr-5 text-2xl;
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+/* React Select */
+.custom-select {
+	&__control {
+		font-size: 24px;
+		height: 56px;
+		background-color: transparent !important;
+		border: 1px solid #0048ba !important;
+		border-radius: 4px !important;
+		box-shadow: none !important;
+
+		&--menu-is-open {
+			border: 2px solid !important;
+			border-color: #003ecb !important;
+		}
+	}
+
+	&__value-container {
+		cursor: text !important;
+		> div {
+			max-width: 200px !important;
+		}
+	}
+
+	&__input-container {
+		color: black !important;
+	}
+
+	&__indicator-separator {
+		display: none !important;
+	}
+
+	&__indicators {
+		cursor: pointer !important;
+	}
+
+	&__indicator {
+		color: #999aa5 !important;
+
+		&:hover {
+			color: #red !important;
+		}
+	}
+
+	&__multi-value {
+		background-color: rgba(#999aa5, 0.6) !important;
+		border-radius: 0.5rem !important;
+	}
+
+	&__multi-value__label {
+		font-size: 80% !important;
+		color: rgba(white, 0.7) !important;
+	}
+
+	&__multi-value__remove {
+		color: rgba(white, 0.8) !important;
+
+		&:hover {
+			background-color: transparent !important;
+			color: rgba(white, 1) !important;
+		}
+	}
+
+	&__menu {
+		background-color: #999aa5 !important;
+		color: rgba(white, 0.6) !important;
+	}
+
+	&__option {
+		cursor: pointer !important;
+		&--is-focused {
+			background-color: lighten(#999aa5, 8%) !important;
+		}
+	}
+
+	&-container {
+		> div {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+
+		.form-control__control {
+			@apply outline-border-none transition-all;
+			border-color: #999aa5 !important;
+			box-shadow: none !important;
+		}
+
+		&:hover,
+		&--menu-is-open {
+			border-color: #999aa5 !important;
+		}
+
+		.form-control__indicators {
+			@apply cursor-pointer;
+		}
+	}
+
+	&__menu {
+		@apply animate-scaleIn;
+	}
+}

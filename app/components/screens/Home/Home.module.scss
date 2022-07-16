@@ -1,44 +1,37 @@
-.wrapper_header {
-	display: grid;
-	align-items: center;
-	font-family: 'Roboto';
-	min-height: 875px;
-	background-color: gray;
-	padding: 0px 120px;
+.headBlock {
+	@apply image-like-bg grid items-center min-h-[875px] px-32 bg-no-repeat;
 	background: url('../../../assets/image/background-main.jpg');
-	background-repeat: no-repeat;
 	background-size: cover;
-	overflow: hidden;
-	letter-spacing: 3.5px;
-	padding: 0 120px;
 
 	.content {
-		display: grid;
-		margin: 0 auto;
-		align-items: center;
-		position: relative;
-		grid-gap: 3px;
-		justify-items: center;
+		@apply grid m-auto items-center relative gap-3 justify-items-center w-full max-w-[1380px];
 		grid-template-columns: 1fr 1fr;
-		width: 100%;
-		max-width: 1380px;
 
 		.label {
-			max-width: 1280px;
-			color: #ffffff;
+			@apply text-white max-w-[1280px];
 
 			h1 {
-				margin-bottom: 24px;
-				font-weight: 600;
-				font-size: 48px;
-				line-height: 58px;
+				@apply my-4 font-semibold text-6xl;
 			}
 			h2 {
-				margin-bottom: 24px;
-				font-weight: 400;
-				font-size: 20px;
-				line-height: 24px;
+				@apply leading-8 mb-6 font-normal text-xl;
 			}
 		}
+	}
+}
+
+.contentBlock {
+	@apply w-full max-w-[1260px] mt-28 mx-auto;
+	.advantages {
+		@apply flex flex-row justify-between mt-[60px] mb-[120px];
+		.item {
+			@apply max-w-xs text-base text-gray-500;
+			> p {
+				@apply mt-4;
+			}
+		}
+	}
+	.directions {
+		@apply inline-grid grid-cols-2 content-center m-auto;
 	}
 }

@@ -1,0 +1,6 @@
+.contactForm {
+	@apply m-auto max-w-[1260px] mb-20;
+	form {
+		@apply relative animate-fade flex m-auto gap-3 flex-col max-w-xl;
+	}
+}

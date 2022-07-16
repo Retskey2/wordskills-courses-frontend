@@ -1,13 +1,13 @@
 import cn from 'classnames'
 import { Children, FC, PropsWithChildren } from 'react'
 
-interface SubHeadingProps {
+interface ISubHeading {
 	small?: boolean
 	center?: boolean
 	className?: string
 }
 
-const SubHeading: FC<PropsWithChildren<SubHeadingProps>> = ({
+const SubHeading: FC<PropsWithChildren<ISubHeading>> = ({
 	children,
 	small,
 	center,

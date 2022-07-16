@@ -2,25 +2,25 @@ import { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import { FC } from 'react'
 
-interface ItemProps {
+import styles from './ItemHorizontal.module.scss'
+
+interface IItemHorizontal {
 	image: StaticImageData
 	title?: string
 	description?: string
 }
 
-const ItemHorizontal: FC<ItemProps> = ({ image }) => {
+const ItemHorizontal: FC<IItemHorizontal> = ({ image }) => {
 	return (
-		<div className="mt-2 bg-white">
-			<div className="relative">
-				<Image objectFit="cover" height={1000} src={image} alt="promo" />
-			</div>
-			<div className="px-5 pb-5">
-				<h2 className="mt-6 font-semibold text-3xl">Национальная сборная</h2>
-				<p className="mt-2 text-xl text-gray-500">
+		<div className={styles.itemHorizontal}>
+			<Image objectFit="cover" height={1000} src={image} alt="promo" />
+			<section>
+				<h2>Национальная сборная</h2>
+				<p>
 					Национальная сборная WorldSkills Russia – носитель лучших технологий
 					подготовки ...
 				</p>
-			</div>
+			</section>
 		</div>
 	)
 }

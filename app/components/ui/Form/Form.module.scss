@@ -1,0 +1,11 @@
+.field {
+	@apply border-solid border-[1px] border-blue-500 rounded h-14 text-2xl;
+	&:focus {
+		@apply border-2;
+	}
+}
+
+.textField {
+	@apply border-[1px] border-blue-500 rounded min-h-[220px] text-2xl;
+	resize: none;
+}

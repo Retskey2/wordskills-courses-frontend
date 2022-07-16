@@ -1,0 +1,15 @@
+.itemVertical {
+	@apply flex mt-4 bg-white;
+	section {
+		@apply flex flex-col px-12 py-10 w-full;
+		.content {
+			@apply flex justify-between text-gray-500 mb-3;
+		}
+		h2 {
+			@apply mb-3 font-medium text-2xl;
+		}
+		p {
+			@apply mb-8 text-gray-500;
+		}
+	}
+}

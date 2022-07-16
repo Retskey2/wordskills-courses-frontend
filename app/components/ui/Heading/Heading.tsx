@@ -1,16 +1,14 @@
 import cn from 'classnames'
 import { FC } from 'react'
 
-import styles from './Typography.module.scss'
-
-interface HeadingProps {
+interface IHeading {
 	title: string
 	small?: boolean
 	center?: boolean
 	className?: string
 }
 
-const Heading: FC<HeadingProps> = ({ title, small, center, className }) => {
+const Heading: FC<IHeading> = ({ title, small, center, className }) => {
 	return (
 		<div
 			className={cn(

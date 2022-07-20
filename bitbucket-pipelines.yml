@@ -25,9 +25,4 @@ pipelines:
            name: Deploy to production
            deployment: production
            script:
-             - echo "Deploying to production environment"
-             - pipe: atlassian/ssh-run:0.2.2
-               variables:
-                 SSH_USER: 'root'
-                 SERVER: '5.23.54.31'
-                 COMMAND: '/home/deploy.sh'
+             - ssh root@5.23.54.31 'cd /home/admin/web/worldskills-education.ru/public_html;git pull; echo "Changes deployed!"'

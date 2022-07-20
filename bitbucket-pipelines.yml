@@ -9,11 +9,12 @@ pipelines:
   default:
     - parallel:
         - step:
-            name: Build and Test
+            name: Npm upd
             caches:
               - node
             script:
-              - npm install
+              - npm install --force
+              - npm i -g @nestjs/cli
         - step:
             name: Build
             script:

@@ -17,7 +17,7 @@ pipelines:
         - step:
             name: Build
             script:
-              - npm install next
+              - npm install next --force
               - npm run build
             caches:
               - node

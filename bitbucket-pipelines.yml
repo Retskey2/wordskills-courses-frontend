@@ -1,0 +1,28 @@
+#  Template NodeJS build
+
+#  This template allows you to validate your NodeJS code.
+#  The workflow allows running tests and code linting on the default branch.
+
+image: node:17
+
+pipelines:
+  default:
+        - step:
+            name: Npm upd
+            caches:
+              - node
+            script:
+              - npm install --force
+              - npm i -g @nestjs/cli
+        - step:
+            name: Build
+            script:
+              - npm install next --force
+              - npm run build
+            caches:
+              - node
+        - step:
+           name: Deploy to production
+           deployment: production
+           script:
+             - ssh root@5.23.54.31 'cd /home/admin/web/worldskills-education.ru/public_html;git pull; echo "Changes deployed!"'

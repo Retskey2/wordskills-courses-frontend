@@ -1,0 +1,21 @@
+.wrapper {
+	@apply w-full max-w-[1260px] m-auto mt-12 mb-16;
+	.contacts {
+		@apply flex mt-8 text-2xl;
+		ul {
+			li {
+				@apply mt-3;
+				&:nth-child(n + 2) {
+					font-weight: 400;
+					font-size: 24px;
+					line-height: 29px;
+					/* identical to box height */
+
+					/* Gray 3 */
+
+					color: #828282;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.projectItemRight {
+	@apply py-10 px-10 mb-10;
+	background: url('../../../../../assets/image/background-main.jpg');
+	background-size: cover;
+
+	.wrapper {
+		@apply w-full max-w-[1260px] m-auto flex justify-center;
+
+		.containerImage {
+			@apply relative w-[380px] h-[490px];
+			.promoImage {
+				@apply absolute top-0 left-0 z-1;
+			}
+			.promoBorder {
+				@apply border border-blue-500 w-[275px] h-[350px] absolute bottom-0 right-0 z-0;
+			}
+		}
+		.containerContent {
+			@apply mr-20;
+			h1 {
+				@apply h-20 flex items-center font-medium text-white text-2xl;
+			}
+			h2 {
+				@apply mt-6 text-2xl font-medium max-w-sm  text-white;
+			}
+			p {
+				@apply max-w-[500px] mt-3 text-gray-500 text-lg;
+			}
+			.teachers {
+				@apply flex items-center gap-2 mt-3;
+				> div {
+					@apply w-12;
+				}
+				> span {
+					@apply text-gray-500;
+				}
+			}
+			.info {
+				@apply flex gap-6 mt-6;
+				> div {
+					@apply flex items-center;
+					span {
+						@apply ml-3 text-white text-xl;
+					}
+				}
+			}
+		}
+	}
+}

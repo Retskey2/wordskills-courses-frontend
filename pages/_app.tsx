@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import MainProvider from 'providers/MainProvider'
 
 import Footer from '@/components/ui/Footer/Footer'
 import Header from '@/components/ui/Header/Header'
@@ -8,11 +9,9 @@ import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<>
-			<Header header={HeaderContent} />
+		<MainProvider>
 			<Component {...pageProps} />
-			<Footer />
-		</>
+		</MainProvider>
 	)
 }
 

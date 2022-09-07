@@ -25,4 +25,4 @@ pipelines:
            name: Deploy to production
            deployment: production
            script:
-             - ssh root@5.23.54.31 'cd /home/admin/web/worldskills-education.ru/public_html;git pull; echo "Changes deployed!"; npm start;'
+             - ssh root@5.23.54.31 'cd /home/admin/web/worldskills-education.ru/public_html;git pull; echo "Changes deployed!";  pm2 delete app; pm2 start npm --name app -- start; pm2 list;'

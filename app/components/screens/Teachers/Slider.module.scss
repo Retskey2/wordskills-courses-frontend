@@ -1,0 +1,29 @@
+$speed: 12s;
+
+.absoluteItems {
+
+    @apply flex absolute left-0;
+
+    width: 200%;
+    animation-name: toLeft;
+    animation-duration: $speed;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+    @keyframes toLeft {
+        from {
+            left: 0
+        }
+
+        to {
+            left: -100%
+        }
+    }
+
+
+}
+
+.absoluteItems:hover {
+    animation-play-state: paused;
+}

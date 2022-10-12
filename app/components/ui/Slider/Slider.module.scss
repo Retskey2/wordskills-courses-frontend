@@ -1,4 +1,4 @@
-$speed: 12s;
+$speed: 16s;
 
 .absoluteItems {
 
@@ -24,6 +24,7 @@ $speed: 12s;
 
 }
 
-.absoluteItems:hover {
-    animation-play-state: paused;
+.imgSlider {
+    @apply rounded-full;
+
 }

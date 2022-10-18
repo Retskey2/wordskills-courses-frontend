@@ -25,6 +25,6 @@ pipelines:
            name: Deploy to production
            deployment: production
            script:
-             - ssh root@89.223.125.193 'cd home/deploy.sh && git pull'
+             - ssh root@89.223.125.193 '/home/deploy.sh'
              - echo "Wow! It\'s amazing!!! Deploy is Done =) !"
               

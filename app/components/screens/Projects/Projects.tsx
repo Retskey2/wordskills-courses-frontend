@@ -32,8 +32,14 @@ const Projects: FC = () => {
 			</div>
 			<CardProject project={ProjectContent} />
 
-			<Slider images={sliderPhotos} ></Slider>
-			<Slider images={sliderPhotos} ></Slider>
+			<div className='flex items-center justify-center flex-col mt-20'>
+				<Heading title="Ведущие эксперты WorldSkills" />
+				<p className=" text-2xl text-gray-500" >
+					У нас учат лучшие преподаватели и ведущие эксперты WorldSkills Russia
+				</p>
+				<Slider images={sliderPhotos} ></Slider>
+				<Slider images={sliderPhotos} ></Slider>
+			</div>
 		</>
 	)
 }

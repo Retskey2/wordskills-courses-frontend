@@ -1,0 +1,19 @@
+.contactForm {
+	@apply m-auto max-w-[1260px] mb-20;
+
+	form {
+		@apply relative animate-fade flex m-auto gap-3 flex-col max-w-xl;
+	}
+}
+
+.inputImage {
+	@apply rounded-full bg-[#B2C7EA] text-[24px] text-[#3232EE] h-14 w-48 flex flex-row;
+	align-self: flex-start;
+	justify-content: space-around;
+	align-items: center;
+
+	input {
+		display: none;
+	}
+
+}

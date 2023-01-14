@@ -39,7 +39,58 @@ const Teachers: FC = () => {
 
 
 			<HeadingBlock content="Ведущие эксперты" className='mt-16'></HeadingBlock>
-
+			<TeachersBlockGrid
+				Blocks={[
+					{
+						ID: 1,
+						FIO: 'Иванов Евгений Витальевич',
+						RoleName: 'Руководитель проекта',
+						Photo: TeachersPhoto
+					},
+					{
+						ID: 2,
+						FIO: 'Иванов Евгений Витальевич',
+						RoleName: 'Руководитель проекта',
+						Photo: TeachersPhoto
+					},
+					{
+						ID: 3,
+						FIO: 'Иванов Евгений Витальевич',
+						RoleName: 'Руководитель проекта',
+						Photo: TeachersPhoto
+					},
+					{
+						ID: 4,
+						FIO: 'Иванов Евгений Витальевич',
+						RoleName: 'Руководитель проекта',
+						Photo: TeachersPhoto
+					},
+					{
+						ID: 5,
+						FIO: 'Иванов Евгений Витальевич',
+						RoleName: 'Руководитель проекта',
+						Photo: TeachersPhoto
+					},
+					{
+						ID: 6,
+						FIO: 'Иванов Евгений Витальевич',
+						RoleName: 'Руководитель проекта',
+						Photo: TeachersPhoto
+					},
+					{
+						ID: 7,
+						FIO: 'Иванов Евгений Витальевич',
+						RoleName: 'Руководитель проекта',
+						Photo: TeachersPhoto
+					},
+					{
+						ID: 8,
+						FIO: 'Иванов Евгений Витальевич',
+						RoleName: 'Руководитель проекта',
+						Photo: TeachersPhoto
+					},
+				]}
+			></TeachersBlockGrid>
 			<ContactFormTeachers></ContactFormTeachers>
 
 

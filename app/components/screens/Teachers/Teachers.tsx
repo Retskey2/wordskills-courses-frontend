@@ -7,6 +7,9 @@ import HeadingBlock from '@/components/ui/Heading/HeadingBlock'
 import TeachersBlock from '@/components/ui/Block/TeachersBlock'
 import TeachersPhoto from '@/assets/image/expert-photo.png'
 import TeachersBlockGrid from '@/components/ui/Block/TeachersBlockGrid'
+import TextOnImage from '@/components/ui/Block/TextOnImage'
+import TeachersTeamPhoto from '@/assets/image/teachers-team-bg.png'
+import cn from "classnames"
 
 const Teachers: FC = () => {
 	return (
@@ -91,6 +94,13 @@ const Teachers: FC = () => {
 					},
 				]}
 			></TeachersBlockGrid>
+
+			<TextOnImage header='Хотите присоединиться к команде?' text="Заполняйте заявку и мы с вами свяжемся!" photo={TeachersTeamPhoto}></TextOnImage>
+			<Heading title='Заявка для экспертов' className={cn('w-full', 'text-center', 'mt-6')}></Heading>
+			<div className={cn('w-full', 'flex', 'items-center', 'flex-col', 'mb-4')}>
+				<p className={cn('text-2xl', 'text-center', 'max-w-[687px]')}>Заполните форму ниже. Мы вам ответим или перезвоним в течение 24 часов!</p>
+			</div>
+
 			<ContactFormTeachers></ContactFormTeachers>
 
 

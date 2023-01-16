@@ -16,6 +16,7 @@ module.exports = {
 			blue: {
 				500: '#0048ba',
 				600: '#003ECB',
+				700: '#3232EE',
 			},
 			gray: {
 				200: '#F7F7F7',
@@ -36,7 +37,7 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				'background-main': "url('../public/background-main.jpg')",
-			  },
+			},
 			spacing: {
 				0.5: '0.12rem',
 				layout: '2.75rem',

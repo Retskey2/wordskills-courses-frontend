@@ -17,22 +17,28 @@ interface ISearchBar {
 const SearchBar: FC<ISearchBar> = ({ placeholder, filtersArray }) => {
     const [filters, setFilters] = useState([...filtersArray]);
     const [sortVisible, setSortVisible] = useState(false);
+
     const sortClicked = () => {
         setSortVisible(!sortVisible)
         const filter = [...filters]
         setFilters([...filter])
     }
+
     const checkboxChange = (e: any) => {
+
+        updateFilterVisibility(e.target.name)
+    }
+    const updateFilterVisibility = (name: string) => {
         const filter = [...filters]
         filter.map((filt) => {
-            if (filt.name === e.target.name) {
+            if (filt.name === name) {
                 filt.isVisible = !(filt.isVisible)
             }
         })
 
         setFilters([...filter])
-
     }
+
     return (
         <>
             <div
@@ -58,7 +64,7 @@ const SearchBar: FC<ISearchBar> = ({ placeholder, filtersArray }) => {
 
                 </div>
                 <div className={cn('p-3', 'relative')}>
-                    <Image alt='' src={SortIcon} onClick={sortClicked}></Image>
+                    <Image alt='' src={SortIcon} onClick={sortClicked} className='cursor-pointer'></Image>
                     <div className={cn('absolute', 'bg-white', 'border', 'border-blue-500', 'py-4',
                         'px-8', 'flex', 'flex-col', 'flex-wrap', 'gap-2',
                         'rounded-3xl', 'z-1', 'right-[50px]', sortVisible ? 'visible' : 'hidden')}>
@@ -80,7 +86,7 @@ const SearchBar: FC<ISearchBar> = ({ placeholder, filtersArray }) => {
                 {filters?.map((value) => {
                     if (value.name !== '' && value.isVisible === true) {
                         return (
-                            <Filter name={value.name}></Filter>
+                            <Filter filter={{ name: value.name }} updateFilterVisibility={updateFilterVisibility}></Filter>
                         )
                     }
                     else {

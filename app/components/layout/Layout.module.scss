@@ -1,0 +1,6 @@
+.wrapper {
+	@apply min-h-screen flex flex-col;
+	.content {
+		@apply flex-grow;
+	}
+}

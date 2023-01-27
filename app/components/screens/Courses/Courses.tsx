@@ -2,17 +2,15 @@ import cn from 'classnames'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 
+import { WrapperContent } from '@/components/layout/WrapperContent'
 import Heading from '@/components/ui/Heading/Heading'
-import Filter from '@/components/ui/Search/Filter'
 import SearchBar from '@/components/ui/Search/SearchBar'
 
 import SubHeading from '../../ui/Heading/SubHeading'
 
-import styles from './Courses.module.scss'
-
 const Courses: FC = () => {
 	return (
-		<div className="w-full max-w-[1260px] m-auto mt-12 mb-16">
+		<WrapperContent>
 			<Heading title="КУРСЫ" small />
 			<SubHeading>Выбери то, что тебе по вкусу!</SubHeading>
 			<div className={cn('m-16')}></div>
@@ -33,7 +31,7 @@ const Courses: FC = () => {
 					},
 				]}
 			></SearchBar>
-		</div>
+		</WrapperContent>
 	)
 }
 

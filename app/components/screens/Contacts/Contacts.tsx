@@ -1,5 +1,6 @@
 import { FC } from 'react'
 
+import { WrapperContent } from '@/components/layout/WrapperContent'
 import GoogleCard from '@/components/ui/GoogleCard/GoogleCard'
 import Heading from '@/components/ui/Heading/Heading'
 import SubHeading from '@/components/ui/Heading/SubHeading'
@@ -8,7 +9,7 @@ import styles from './Contacts.module.scss'
 
 const Contacts: FC = () => {
 	return (
-		<div className={styles.wrapper}>
+		<WrapperContent>
 			<Heading title="КОНТАКТЫ" small />
 			<SubHeading>Доступны в любое время для вас</SubHeading>
 			<div className={styles.contacts}>
@@ -40,7 +41,7 @@ const Contacts: FC = () => {
 				</SubHeading>
 				<ContactForm /> */}
 			</div>
-		</div>
+		</WrapperContent>
 	)
 }
 

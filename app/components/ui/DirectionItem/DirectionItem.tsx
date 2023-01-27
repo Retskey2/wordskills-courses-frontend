@@ -15,7 +15,7 @@ const DirectionItem: FC = () => {
 			<p>Индивидуальные консультации и обучение от экспертов WorldSkills.</p>
 			<Link href="/">
 				<a className="">
-					<Image src={Arrow} alt="arrow"></Image>
+					<Image src={Arrow} alt="arrow" />
 				</a>
 			</Link>
 		</div>

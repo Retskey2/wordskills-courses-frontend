@@ -1,5 +1,5 @@
 .directionItem {
-	@apply max-w-xs p-8 min-h-[320px] relative rounded shadow-direction mt-12 gap-4;
+	@apply max-w-xs px-8 pt-8 relative rounded shadow-direction mt-12 min-h-[320px];
 	> h1 {
 		@apply text-blue-600 text-3xl mb-1;
 		> span {

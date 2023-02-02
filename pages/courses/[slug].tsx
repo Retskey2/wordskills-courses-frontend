@@ -18,15 +18,21 @@ const Courses: NextPage = () => {
 						Веб-дизайн и разрабтка КОД 1.4
 					</div>
 					<div className="text-2xl">от 80 000 ₽</div>
-					<div className="flex justify-between mt-6">
-						<div>4ч/нед</div>
-						<div>6 месяцев</div>
-						<div>Online</div>
-					</div>
+					<ul className="flex justify-between mt-6">
+						<li>
+							<span>4ч/нед</span>
+						</li>
+						<li>
+							<span>6 месяцев</span>
+						</li>
+						<li>
+							<span>Online</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<Button children="Записаться" variant="white" className="mt-6 mx-auto" />
-			<div>Описание</div>
+			<div className="my-6 text-[#828282]">Описание</div>
 			<p className="text-justify">
 				Онлайн-курс ВШЭ адресован всем, кто интересуется индивидуальными
 				различиями – сильными и слабыми сторонами личности, вопросами

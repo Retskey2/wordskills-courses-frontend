@@ -1,5 +1,6 @@
 import { StaticImageData } from 'next/image'
 import { FC } from 'react'
+import { Meta } from 'utills/meta/Meta'
 
 import { WrapperContent } from '@/components/layout/WrapperContent'
 import Heading from '@/components/ui/Heading/Heading'
@@ -31,7 +32,7 @@ const Projects: FC = () => {
 		sliderImage2,
 	]
 	return (
-		<>
+		<Meta title="Проекты">
 			<WrapperContent>
 				<Heading title="ПРОЕКТЫ" small />
 				<SubHeading className="mb-16">
@@ -49,7 +50,7 @@ const Projects: FC = () => {
 				<Slider images={sliderPhotos}></Slider>
 				<Slider images={sliderPhotos}></Slider>
 			</div>
-		</>
+		</Meta>
 	)
 }
 

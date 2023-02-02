@@ -1,0 +1,26 @@
+.teacher-grid-item {
+	@apply items-center flex flex-col flex-wrap;
+
+	.image-block {
+		@apply relative w-36 h-40;
+		:first-child {
+			@apply z-3;
+		}
+		> div {
+			@apply absolute -top-10 -left-10 z-0 w-28 h-28 border-[1px] border-[#3232EE];
+		}
+	}
+	.info-block {
+		@apply text-center;
+		:nth-child(1) {
+			@apply text-[#3232EE] font-medium text-xl max-w-[200px];
+		}
+
+		:nth-child(2) {
+			@apply text-[#828282] font-normal text-base;
+		}
+	}
+}
+.grid-container {
+	@apply grid grid-cols-4 grid-rows-2 gap-20 my-20;
+}

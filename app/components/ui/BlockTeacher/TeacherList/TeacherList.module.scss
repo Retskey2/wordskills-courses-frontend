@@ -1,0 +1,42 @@
+.teacher-list {
+	:nth-child(2) {
+		@apply justify-end;
+
+		.image-block {
+			@apply order-2;
+		}
+		.info-block {
+			@apply order-1 ml-0;
+		}
+	}
+}
+
+.teacher-list-item {
+	@apply flex mt-24 items-center justify-start;
+	.image-block {
+		@apply relative w-36 h-40;
+		:first-child {
+			@apply z-3;
+		}
+		> div {
+			@apply absolute -bottom-10 -right-10 z-0 w-28 h-28 border-[1px] border-[#3232EE];
+		}
+	}
+
+	.info-block {
+		@apply ml-14;
+
+		:nth-child(1) {
+			@apply text-[#3232EE] font-medium text-2xl;
+		}
+		:nth-child(2) {
+			@apply text-[#828282] font-normal mb-4;
+		}
+		:nth-child(3) {
+			@apply flex gap-2 items-center;
+			> span {
+				@apply font-normal text-lg text-[#0048BA] m-0;
+			}
+		}
+	}
+}

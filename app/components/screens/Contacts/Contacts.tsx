@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import GoogleCard from '@/components/ui/GoogleCard/GoogleCard'
+import MapCard from '@/components/ui/MapCard/MapCard'
 import Heading from '@/components/ui/Heading/Heading'
 import SubHeading from '@/components/ui/Heading/SubHeading'
 
@@ -32,7 +32,7 @@ const Contacts: FC = () => {
 				</div>
 			</div>
 			<div>
-				<GoogleCard />
+				<MapCard />
 				{/* <Heading title="Остались вопросы?" center />
 				<SubHeading small center className="mb-6">
 					Заполните форму ниже. Мы вам ответим или <br /> перезвоним в течение

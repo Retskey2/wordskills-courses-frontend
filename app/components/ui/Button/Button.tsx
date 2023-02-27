@@ -4,7 +4,7 @@ import { FC, PropsWithChildren } from 'react'
 import styles from './Button.module.scss'
 
 interface IButton {
-	variant?: 'white' | 'arrow'
+	variant?: 'white' | 'arrow' | 'outline'
 	className?: string
 }
 
@@ -19,6 +19,7 @@ const Button: FC<PropsWithChildren<IButton>> = ({
 				{
 					[styles.white]: variant === 'white',
 					[styles.arrow]: variant === 'arrow',
+					[styles.outline]: variant === 'outline',
 				},
 				styles.button,
 				className

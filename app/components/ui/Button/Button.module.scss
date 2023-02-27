@@ -8,4 +8,9 @@
 	&.white {
 		@apply bg-white text-blue-600 border-solid border-2 border-blue-600;
 	}
+
+	&.outline {
+		@apply bg-transparent border-solid border-2 border-white;
+	}
+
 }

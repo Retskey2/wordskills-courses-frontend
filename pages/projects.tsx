@@ -1,10 +1,7 @@
-import { NextPage } from 'next'
-import { FC } from 'react'
+import { NextPage } from 'next';
 
-import Projects from '@/components/screens/Projects/Projects'
+import Projects from '@/components/screens/Projects/Projects';
 
-const project: NextPage = () => {
-	return <Projects />
-}
+const project: NextPage = () => <Projects />;
 
-export default project
+export default project;

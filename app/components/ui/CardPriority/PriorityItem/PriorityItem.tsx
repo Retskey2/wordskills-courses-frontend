@@ -1,18 +1,16 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
-import PriorityItemLeft from './PriorityItemLeft'
-import PriorityItemRight from './PriorityItemRight'
+import PriorityItemLeft from './PriorityItemLeft';
+import PriorityItemRight from './PriorityItemRight';
 
 interface IPriorityItem {
-	right?: boolean
+	right?: boolean;
 }
 
-const PriorityItem: FC<IPriorityItem> = ({ right }) => {
-	return (
-		<div className="flex items-center mt-20">
-			{right ? <PriorityItemRight /> : <PriorityItemLeft />}
-		</div>
-	)
-}
+const PriorityItem: FC<IPriorityItem> = ({ right }) => (
+	<div className='mt-20 flex items-center'>
+		{right ? <PriorityItemRight /> : <PriorityItemLeft />}
+	</div>
+);
 
-export default PriorityItem
+export default PriorityItem;

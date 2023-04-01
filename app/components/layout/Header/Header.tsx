@@ -1,45 +1,37 @@
-import cn from 'classnames'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { FC } from 'react'
+import cn from 'classnames';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FC } from 'react';
 
-import Logo from '@/assets/image/logo.svg'
+import Logo from '@/assets/image/logo.svg';
 
-import styles from './Header.module.scss'
-import HeaderItem from './HeaderItem'
-import { IHeader } from './header.interface'
+import styles from './Header.module.scss';
+import HeaderItem from './HeaderItem';
+import { IHeader } from './header.interface';
 
 const Header: FC<{ header: IHeader }> = ({ header: { items } }) => {
-	const { asPath } = useRouter()
+	const { asPath } = useRouter();
 	return (
 		<div
 			className={cn(
 				{
 					[styles.smash]: asPath !== '/',
-					[styles.glass]: asPath === '/',
+					[styles.glass]: asPath === '/'
 				},
 				styles.header
 			)}
 		>
-			<Link href="/">
-				<a>
-					<Image
-						draggable={false}
-						src={Logo}
-						width="110"
-						height="65"
-						alt="logo"
-					/>
-				</a>
+			<Link href='/'>
+				<Image alt='logo' draggable={false} height='65' src={Logo} width='110' />
 			</Link>
 			<ul className={styles.ul}>
 				{items.map((item) => (
-					<HeaderItem item={item} key={item.link} />
+					<HeaderItem key={item.link} item={item} />
 				))}
 			</ul>
 		</div>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;

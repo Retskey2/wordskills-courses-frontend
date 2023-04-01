@@ -1,9 +1,9 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
 
 export interface ITeacher {
-    _id: number,
-    Name: string,
-    RoleName: string,
-    Email: string,
-    Photo: StaticImageData
+	_id: number;
+	Name: string;
+	RoleName: string;
+	Email: string;
+	Photo: StaticImageData;
 }

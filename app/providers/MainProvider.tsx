@@ -1,13 +1,13 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { FC, PropsWithChildren, useState } from 'react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { FC, PropsWithChildren, useState } from 'react';
 
-import Layout from '@/components/layout/Layout'
+import Layout from '@/components/layout/Layout';
 
-import { HeadProvider } from './HeadProvider/HeadProvider'
+import { HeadProvider } from './HeadProvider/HeadProvider';
 
 const MainProvider: FC<PropsWithChildren> = ({ children }) => {
-	const [queryClient] = useState(() => new QueryClient())
+	const [queryClient] = useState(() => new QueryClient());
 	return (
 		<QueryClientProvider client={queryClient}>
 			<HeadProvider>
@@ -15,7 +15,7 @@ const MainProvider: FC<PropsWithChildren> = ({ children }) => {
 			</HeadProvider>
 			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>
-	)
-}
+	);
+};
 
-export default MainProvider
+export default MainProvider;

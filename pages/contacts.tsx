@@ -1,10 +1,7 @@
-import { NextPage } from 'next'
-import { FC } from 'react'
+import { NextPage } from 'next';
 
-import Contacts from '@/components/screens/Contacts/Contacts'
+import Contacts from '@/components/screens/Contacts/Contacts';
 
-const contacts: NextPage = () => {
-	return <Contacts />
-}
+const contacts: NextPage = () => <Contacts />;
 
-export default contacts
+export default contacts;

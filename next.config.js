@@ -2,23 +2,24 @@
 const nextConfig = {
 	poweredByHeader: false,
 	optimizeFonts: false,
+	reactStrictMode: true,
 	env: {
 		APP_URL: process.env.REACT_APP_API_URL,
 		APP_ENV: process.env.REACT_APP_ENV,
-		APP_SERVER_URL: process.env.REACT_APP_SERVER_URL,
+		APP_SERVER_URL: process.env.REACT_APP_SERVER_URL
 	},
 	async rewrites() {
 		return [
 			{
 				source: '/api/:path*',
-				destination: `http://localhost:4000/api/:path*`,
+				destination: `http://localhost:4000/api/:path*`
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `http://localhost:4000/uploads/:path*`,
-			},
-		]
-	},
-}
+				destination: `http://localhost:4000/uploads/:path*`
+			}
+		];
+	}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

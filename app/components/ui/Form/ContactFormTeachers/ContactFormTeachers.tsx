@@ -1,43 +1,40 @@
-import { FC } from 'react'
-import { Controller, SubmitHandler, useForm } from 'react-hook-form'
-import ReactSelect from 'react-select'
+import Image from 'next/image';
+import { FC } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
-import Button from '@/components/ui/Button/Button'
+import attachIcon from '@/assets/image/attachment-icon.svg';
+import Button from '@/components/ui/Button/Button';
 
-import Field from '../Field'
-import TextField from '../TextField'
 
-import styles from './ContactFormTeachers.module.scss'
-import { IFormsField } from './forms.types'
+import Field from '../Field';
+import TextField from '../TextField';
 
-import attachIcon from '@/assets/image/attachment-icon.svg'
-import Image, { StaticImageData } from 'next/image'
+import styles from './ContactFormTeachers.module.scss';
+import { IFormsField } from './forms.types';
 
 const ContactFormTeachers: FC = () => {
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
-		reset,
-		control,
+		reset
 	} = useForm<IFormsField>({
-		mode: 'onChange',
-	})
+		mode: 'onChange'
+	});
 
-	const onSubmit: SubmitHandler<IFormsField> = (data) => {
-		console.log(data)
-		reset()
-	}
+	const onSubmit: SubmitHandler<IFormsField> = () => {
+		reset();
+	};
 
 	return (
 		<div className={styles.contactForm}>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Field
 					{...register('name', {
-						required: 'Имя обязательное поле',
+						required: 'Имя обязательное поле'
 					})}
-					placeholder="Имя*"
 					error={errors.name}
+					placeholder='Имя*'
 				/>
 
 				<Field
@@ -46,11 +43,11 @@ const ContactFormTeachers: FC = () => {
 						pattern: {
 							value:
 								/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-							message: 'Неккоректная почта!',
-						},
+							message: 'Неккоректная почта!'
+						}
 					})}
-					placeholder="E-mail*"
 					error={errors.email}
+					placeholder='E-mail*'
 				/>
 
 				<Field
@@ -59,11 +56,11 @@ const ContactFormTeachers: FC = () => {
 						pattern: {
 							value:
 								/^\s*(?:\+?(\d{1,3}))?[\W\D\s]*(\d[\W\D\s]*?\d[\D\W\s]*?\d)[\W\D\s]*(\d[\W\D\s]*?\d[\D\W\s]*?\d)[\W\D\s]*(\d[\W\D\s]*?\d[\D\W\s]*?\d[\W\D\s]*?\d)(?: *x(\d+))?\s*$/,
-							message: 'Неккоректный телефон',
-						},
+							message: 'Неккоректный телефон'
+						}
 					})}
-					placeholder="Телефон*"
 					error={errors.phone}
+					placeholder='Телефон*'
 				/>
 
 				<Field
@@ -71,28 +68,23 @@ const ContactFormTeachers: FC = () => {
 						required: 'Лет опыта работы экспертом - обязательное поле',
 						pattern: {
 							value: /\d+/,
-							message: 'Неккоректный телефон',
-						},
+							message: 'Неккоректный телефон'
+						}
 					})}
-					placeholder="Лет опыта работы экспертом*"
 					error={errors.experience}
+					placeholder='Лет опыта работы экспертом*'
 				/>
 				<div className={styles.inputImage}>
-					<input type={'file'} accept="image/*"></input>
-					<label>Резюме* </label>
-					<Image src={attachIcon}></Image>
+					<input accept='image/*' type='file' />
+					<Image src={attachIcon} />
 				</div>
 
+				<TextField {...register('info')} placeholder='Дополнительная информация' />
 
-				<TextField
-					{...register('info')}
-					placeholder="Дополнительная информация"
-				/>
-
-				<Button className="m-auto mt-6">Отправить</Button>
+				<Button className='m-auto mt-6'>Отправить</Button>
 			</form>
 		</div>
-	)
-}
+	);
+};
 
-export default ContactFormTeachers
+export default ContactFormTeachers;

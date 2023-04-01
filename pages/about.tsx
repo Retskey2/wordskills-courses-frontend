@@ -1,9 +1,7 @@
-import { NextPage } from 'next'
+import { NextPage } from 'next';
 
-import About from '@/components/screens/About/About'
+import About from '@/components/screens/About/About';
 
-const about: NextPage = () => {
-	return <About />
-}
+const about: NextPage = () => <About />;
 
-export default about
+export default about;

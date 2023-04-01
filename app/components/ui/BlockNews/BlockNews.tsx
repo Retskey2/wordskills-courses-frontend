@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import { BlockNewsItem } from './BlockNewsItem'
+import { BlockNewsItem } from './BlockNewsItem';
 
-const BlockNews = () => {
-	return (
-		<div className="flex gap-6 mt-8">
-			<BlockNewsItem />
-			<BlockNewsItem />
-		</div>
-	)
-}
+const BlockNews = () => (
+	<div className='mt-8 flex gap-6'>
+		<BlockNewsItem />
+		<BlockNewsItem />
+	</div>
+);
 
-export default BlockNews
+export default BlockNews;

@@ -1,9 +1,9 @@
 export interface IHeaderItem {
-    title: string, 
-    link: string
+	title: string;
+	link: string;
 }
 
 export interface IHeader {
-    title: string,
-    items: IHeaderItem[]
+	title: string;
+	items: IHeaderItem[];
 }

@@ -1,5 +1,3 @@
-import React from 'react'
+import React from 'react';
 
-export const Pagination = (props: any) => {
-	return <div>Pagination</div>
-}
+export const Pagination = () => <div>Pagination</div>;

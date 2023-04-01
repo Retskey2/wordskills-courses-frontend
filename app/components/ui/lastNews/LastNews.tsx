@@ -1,75 +1,71 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { FC } from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { FC } from 'react';
 
-import Heading from '@/components/ui/Heading/Heading'
 
-import arrow from '@/assets/image/arrow-show.svg'
-import navigator from '@/assets/image/navigator-icon.svg'
-import NewsHorizontal from '@/assets/image/news-horizontal.jpg'
-import NewsVertical from '@/assets/image/news-vertical.png'
+import arrow from '@/assets/image/arrow-show.svg';
+import navigator from '@/assets/image/navigator-icon.svg';
+import NewsHorizontal from '@/assets/image/news-horizontal.jpg';
+import NewsVertical from '@/assets/image/news-vertical.png';
+import Heading from '@/components/ui/Heading/Heading';
 
-import ItemHorizontal from './ItemHorizontal/ItemHorizontal'
-import ItemVertical from './ItemVertical/ItemVertical'
-import styles from './LastNews.module.scss'
+import ItemHorizontal from './ItemHorizontal/ItemHorizontal';
+import ItemVertical from './ItemVertical/ItemVertical';
+import styles from './LastNews.module.scss';
 
 interface NewsProps {
-	horizontal?: boolean
+	horizontal?: boolean;
 }
 
-let dataNewsVertical = [
+const dataNewsVertical = [
 	{
 		id: 1,
-		image: NewsVertical,
+		image: NewsVertical
 	},
 	{
 		id: 2,
-		image: NewsVertical,
-	},
-]
+		image: NewsVertical
+	}
+];
 
-let dataWNewsHorizontal = [
+const dataWNewsHorizontal = [
 	{
 		id: 1,
-		image: NewsHorizontal,
+		image: NewsHorizontal
 	},
 	{
 		id: 2,
-		image: NewsHorizontal,
-	},
-]
+		image: NewsHorizontal
+	}
+];
 
-const LastNews: FC<NewsProps> = ({ horizontal }) => {
-	return (
-		<div className={styles.newsBlock}>
-			<section>
-				<div className={styles.article}>
-					<Image src={navigator} alt="navigator" />
-					<Heading title="Последние события" className="ml-2" />
+const LastNews: FC<NewsProps> = ({ horizontal }) => (
+	<div className={styles.newsBlock}>
+		<section>
+			<div className={styles.article}>
+				<Image alt='navigator' src={navigator} />
+				<Heading className='ml-2' title='Последние события' />
+			</div>
+			{horizontal ? (
+				<div className={styles.item}>
+					{dataWNewsHorizontal.map((data) => (
+						<ItemHorizontal key={data.id} image={data.image} />
+					))}
 				</div>
-				{horizontal ? (
-					<div className={styles.item}>
-						{dataWNewsHorizontal.map((data) => (
-							<ItemHorizontal key={data.id} image={data.image} />
-						))}
-					</div>
-				) : (
-					<div>
-						{dataNewsVertical.map((data) => (
-							<ItemVertical key={data.id} image={data.image} />
-						))}
-					</div>
-				)}
-				<div className={styles.viewAll}>
-					<Link href="/">
-						<a>
-							<span>Посмотреть все</span>
-							<Image src={arrow} alt="arrow" />
-						</a>
-					</Link>
+			) : (
+				<div>
+					{dataNewsVertical.map((data) => (
+						<ItemVertical key={data.id} image={data.image} />
+					))}
 				</div>
-			</section>
-		</div>
-	)
-}
-export default LastNews
+			)}
+			<div className={styles.viewAll}>
+				<Link href='/'>
+					<span>Посмотреть все</span>
+					<Image alt='arrow' src={arrow} />
+				</Link>
+			</div>
+		</section>
+	</div>
+);
+export default LastNews;

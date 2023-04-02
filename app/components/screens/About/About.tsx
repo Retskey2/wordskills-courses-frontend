@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { Meta } from 'utills/meta/Meta';
 
 import { WrapperContent } from '@/components/layout/WrapperContent';
-import CardPriority from '@/components/ui/CardPriority/CardPriority';
 import Heading from '@/components/ui/Heading/Heading';
 import SubHeading from '@/components/ui/Heading/SubHeading';
+import CardPriority from '@/components/ui/cards/CardPriority/CardPriority';
 
 import styles from './About.module.scss';
 

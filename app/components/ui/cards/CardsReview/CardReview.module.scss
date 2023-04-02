@@ -1,0 +1,15 @@
+.card-review-wrapper {
+    @apply grid gap-4 p-4 bg-white grid-cols-3 cursor-pointer;
+  
+
+  .card-client {
+    @apply flex gap-2 text-xl;
+    }
+
+    .card-content {
+      grid-column: span 2;
+      >p {
+        @apply text-sm leading-5; 
+        }
+    };
+}

@@ -61,8 +61,10 @@ const LastNews: FC<NewsProps> = ({ horizontal }) => (
 			)}
 			<div className={styles.viewAll}>
 				<Link href='/'>
-					<span>Посмотреть все</span>
-					<Image alt='arrow' src={arrow} />
+					<div>
+						<span>Посмотреть все</span>
+						<Image alt='arrow' src={arrow} />
+					</div>
 				</Link>
 			</div>
 		</section>

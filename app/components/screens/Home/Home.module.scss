@@ -1,6 +1,6 @@
 .headBlock {
 	@apply image-like-bg grid items-center min-h-[875px] px-32 bg-no-repeat;
-	background: url('../../../assets/image/background-main.jpg');
+	background: url('/backgrounds/background-main.jpg');
 	background-size: cover;
 
 	.content {

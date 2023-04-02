@@ -9,8 +9,10 @@ import chalkboard from '@/assets/image/chalkboard-icon.svg';
 import diploma from '@/assets/image/diploma-icon.svg';
 import Button from '@/components/ui/Button/Button';
 import DirectionItem from '@/components/ui/DirectionItem/DirectionItem';
-import ContactForm from '@/components/ui/Form/ContactForm/ContactForm';
 import Heading from '@/components/ui/Heading/Heading';
+import { CarouselScrollerCourse } from '@/components/ui/carousels/CarouselScrollerCourse/CarouselScrollerCouse';
+import { CarouselScrollerReview } from '@/components/ui/carousels/CarouselScrollerReview/CarouselScrollerReview';
+import ContactForm from '@/components/ui/forms/ContactForm/ContactForm';
 import LastNews from '@/components/ui/lastNews/LastNews';
 
 
@@ -66,6 +68,13 @@ const Home: FC = () => (
 						<p>Сертификат об окончании школы подготовки по стандратам WorldSkills.</p>
 					</div>
 				</div>
+				<div>
+					<Heading center title='Самые популярные курсы' />
+					<SubHeading center small className='mb-10'>
+						Подготовка по самым популярным и актуальным направлениям 2022 года.
+					</SubHeading>
+				</div>
+				<CarouselScrollerCourse />
 			</div>
 			<LastNews />
 			<div className={styles.contentBlock}>
@@ -76,7 +85,8 @@ const Home: FC = () => (
 					</SubHeading>
 				</div>
 				<div>
-					<Button className='m-auto mt-14' variant='white'>
+					<CarouselScrollerReview />
+					<Button className='m-auto mt-8' variant='white'>
 						Оставить отзыв
 					</Button>
 				</div>

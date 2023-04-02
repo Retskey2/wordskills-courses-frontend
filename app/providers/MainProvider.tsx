@@ -8,11 +8,13 @@ import { HeadProvider } from './HeadProvider/HeadProvider';
 
 const MainProvider: FC<PropsWithChildren> = ({ children }) => {
 	const [queryClient] = useState(() => new QueryClient());
+
 	return (
 		<QueryClientProvider client={queryClient}>
 			<HeadProvider>
 				<Layout>{children}</Layout>
 			</HeadProvider>
+
 			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>
 	);

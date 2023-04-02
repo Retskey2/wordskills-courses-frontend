@@ -23,7 +23,14 @@ const Header: FC<{ header: IHeader }> = ({ header: { items } }) => {
 			)}
 		>
 			<Link href='/'>
-				<Image alt='logo' draggable={false} height='65' src={Logo} width='110' />
+				<Image
+					alt='logo'
+					className='cursor-pointer'
+					draggable={false}
+					height='65'
+					src={Logo}
+					width='110'
+				/>
 			</Link>
 			<ul className={styles.ul}>
 				{items.map((item) => (

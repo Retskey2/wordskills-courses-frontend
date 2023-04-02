@@ -6,10 +6,10 @@ import { WrapperContent } from '@/components/layout/WrapperContent';
 import { TeacherGrid } from '@/components/ui/BlockTeacher/TeacherGrid/TeacherGrid';
 import { TeacherList } from '@/components/ui/BlockTeacher/TeacherList/TeacherList';
 import TextOnImage from '@/components/ui/BlockTeacher/TextOnImage';
-import ContactFormTeachers from '@/components/ui/Form/ContactFormTeachers/ContactFormTeachers';
 import Heading from '@/components/ui/Heading/Heading';
 import HeadingBlock from '@/components/ui/Heading/HeadingBlock';
 import SubHeading from '@/components/ui/Heading/SubHeading';
+import ContactFormTeachers from '@/components/ui/forms/ContactFormTeachers/ContactFormTeachers';
 
 
 import { DataTeachers } from './teachers.data';

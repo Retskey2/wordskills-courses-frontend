@@ -1,0 +1,25 @@
+.card-course-wrapper {
+    @apply flex flex-col cursor-pointer bg-transparent bg-white rounded gap-1 p-6;
+    box-shadow: 12px 4px 100px rgba(0, 0, 0, 0.05);
+    >h2 {
+            @apply font-medium text-xl mt-6; 
+        }
+
+
+    >span {
+        @apply text-[#0048BA] text-lg;
+        }
+
+    >p {
+        @apply text-[#828282] text-justify;
+        }
+
+    >ul {
+            @apply text-[rgb(0,72,186)] flex justify-between;
+        }
+            &:hover {
+         	      box-shadow: 12px 4px 100px rgba(0, 0, 0.25, 0.25);
+                }
+    }
+
+

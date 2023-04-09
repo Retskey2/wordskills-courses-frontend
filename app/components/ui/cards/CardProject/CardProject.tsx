@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { IProject } from '../../screens/Projects/projects.interface';
+import { IProject } from '@/utills/typescript/interfaces/project.interface';
 
 import ProjectItemLeft from './ProjectItem/ProjectItemLeft/ProjectItemLeft';
 import ProjectItemRight from './ProjectItem/ProjectItemRight/ProjectItemRight';

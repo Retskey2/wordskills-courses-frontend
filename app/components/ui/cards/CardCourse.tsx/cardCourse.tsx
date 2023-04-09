@@ -3,29 +3,29 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import { ICardCourseItem } from '@/utills/typescript/interfaces/courseItem.interface';
+import { ICourse } from '@/utills/typescript/interfaces/course.interface';
 
 import styles from './cardCourse.module.scss';
 
 interface ICardCourse {
-	item: ICardCourseItem;
+	item: ICourse;
 	className?: string;
 }
 
 export const CardCourse: React.FC<ICardCourse> = ({
-	item: { category, description, timeDuration, timeWeek, title, type },
+	item: { courseDurationMonth, desc, hoursInWeek, isOnline, name },
 	className
 }) => (
 	<Link href='/'>
 		<div className={cn(className, styles['card-course-wrapper'])}>
 			<Image alt='navigator' height={85} src='/icons/course-icon.svg' width={85} />
-			<h2>{title}</h2>
-			<span>{category}</span>
-			<p>{description}</p>
+			<h2>{name}</h2>
+			<span>Junior</span>
+			<p>{desc}</p>
 			<ul>
-				<li>{timeWeek}ч/нед</li>
-				<li>{timeDuration}ч/нед</li>
-				<li>{type}</li>
+				<li>{hoursInWeek}ч/нед</li>
+				<li>{courseDurationMonth}ч/нед</li>
+				<li>{isOnline && 'Online'}</li>
 			</ul>
 		</div>
 	</Link>

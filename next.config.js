@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
+require('dotenv').config();
+
 const nextConfig = {
 	poweredByHeader: false,
 	optimizeFonts: false,
 	reactStrictMode: true,
 	env: {
-		APP_URL: process.env.REACT_APP_API_URL,
-		APP_ENV: process.env.REACT_APP_ENV,
-		APP_SERVER_URL: process.env.REACT_APP_SERVER_URL
+		APP_SERVER_URL: process.env.APP_SERVER_URL
 	},
 	async rewrites() {
 		return [

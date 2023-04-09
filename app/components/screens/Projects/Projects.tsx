@@ -5,8 +5,7 @@ import { WrapperContent } from '@/components/layout/WrapperContent';
 import Heading from '@/components/ui/Heading/Heading';
 import SubHeading from '@/components/ui/Heading/SubHeading';
 import CardProject from '@/components/ui/cards/CardProject/CardProject';
-
-import { ProjectContent } from './projects.data';
+import { ProjectContent } from '@/utills/data/projects.data';
 
 const Projects: FC = () => (
 	<Meta title='Проекты'>

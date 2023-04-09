@@ -1,7 +1,7 @@
 import ProjectImage from '@/assets/image/project-photo.png';
 import Photo from '@/assets/image/teacher-photo.png';
 
-import { IProject } from './projects.interface';
+import { IProject } from '../typescript/interfaces/project.interface';
 
 export const ProjectContent: IProject = {
 	title: 'IProject',

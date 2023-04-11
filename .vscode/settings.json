@@ -1,5 +1,8 @@
 {
     "files.associations": {
         "*.scss": "sass"
-    }
+    },
+    "cSpell.words": [
+        "debouned"
+    ]
 }

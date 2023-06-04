@@ -7,7 +7,7 @@ import { axiosClassic } from '../interceptors';
 
 interface RequestPokemonParams {
 	params: {
-		debounedSearchValue: string;
+		debounedSearchValue?: string;
 		page?: number;
 		skip?: number;
 		take?: number;
@@ -28,7 +28,7 @@ interface ResponseData {
 }
 
 async function fetchPageCourses({
-	params: { debounedSearchValue, page = 1, skip, take = 9 },
+	params: { debounedSearchValue = '', page = 1, skip, take = 9 },
 	config
 }: RequestPokemonParams): Promise<ResponseData> {
 	skip = (page - 1) * take;

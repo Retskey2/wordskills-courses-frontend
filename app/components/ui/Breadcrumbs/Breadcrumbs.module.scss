@@ -1,0 +1,19 @@
+.breadcrumbs-container {
+    ul, li {
+        @apply flex gap-2 items-center text-xl text-[#BDBDBD];
+    }
+
+    li {
+        >span {
+            @apply cursor-pointer;
+        }
+
+         &:nth-child(2) { 
+            @apply text-[#0048BA]
+        }
+
+        &:not(:last-child):hover { 
+            @apply underline
+        }
+    }
+}

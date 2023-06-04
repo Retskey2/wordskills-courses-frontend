@@ -17,7 +17,6 @@ const Courses: FC = () => {
 
 	const debounedSearchValue = useDebounce(searchValue, 300);
 	const { data, isFetching } = useRequestCoursesQueries({ debounedSearchValue, page });
-
 	return (
 		<Meta title='Курсы'>
 			<WrapperContent>
@@ -29,6 +28,11 @@ const Courses: FC = () => {
 					value={searchValue}
 					onChange={({ target: { value } }) => setSearchValue(value)}
 				/>
+				{data?.data.length === 0 ? (
+					<h2 className='mt-20 text-center text-2xl'>Данных не найдено</h2>
+				) : (
+					<></>
+				)}
 
 				<DisplayCourse data={data?.data} isFetching={isFetching} />
 

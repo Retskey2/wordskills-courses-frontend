@@ -1,14 +1,16 @@
+import { Skeleton } from '@mui/material';
 import cn from 'classnames';
 import { KeenSliderOptions, useKeenSlider } from 'keen-slider/react';
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
-import { dataCourse } from '@/utills/data/couse.data';
+import { useRequestCoursesQueries } from '@/api/hooks/useRequestCoursesQueries';
 
 import { CardCourse } from '../../cards/CardCourse.tsx/cardCourse';
 import styles from '../Carousel.module.scss';
 
 
-export const CarouselScrollerCourse = () => {
+export const CarouselScrollerCourse: FC = () => {
+	const { data } = useRequestCoursesQueries({ page: 1, take: 3 });
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>();
 
@@ -39,13 +41,17 @@ export const CarouselScrollerCourse = () => {
 		<>
 			<div className='navigation-wrapper'>
 				<div ref={sliderRef} className={cn('keen-slider', styles['media-cards-container'])}>
-					{dataCourse.map((item) => (
-						<CardCourse
-							key={item.description + Math.random()}
-							className='keen-slider__slide'
-							item={item}
-						/>
-					))}
+					{data
+						? data.data.map((item) => (
+								<CardCourse
+									key={item.id + Math.random()}
+									className='keen-slider__slide'
+									item={item}
+								/>
+						  ))
+						: Array.from({ length: 9 }, (_, index) => index + 1).map(() => (
+								<Skeleton className='keen-slider__slide' height={373} width={416} />
+						  ))}
 				</div>
 			</div>
 			{instanceRef.current && (

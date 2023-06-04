@@ -60,8 +60,8 @@ const LastNews: FC<NewsProps> = ({ horizontal }) => (
 				</div>
 			)}
 			<div className={styles.viewAll}>
-				<Link href='/'>
-					<div>
+				<Link href='/news'>
+					<div className='cursor-pointer'>
 						<span>Посмотреть все</span>
 						<Image alt='arrow' src={arrow} />
 					</div>

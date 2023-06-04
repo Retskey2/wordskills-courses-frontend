@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 
 
@@ -48,7 +49,9 @@ const ProjectItemLeft: FC<{ item: IProjectItem }> = ({ item }) => (
 						<span>{item.old}</span>
 					</div>
 				</div>
-				<Button className='mt-7'>Смотреть курсы</Button>
+				<Button className='mt-7'>
+					<Link href='/courses'>Смотреть курсы</Link>
+				</Button>
 			</div>
 		</div>
 	</div>

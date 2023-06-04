@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 
 
@@ -39,8 +40,9 @@ const ProjectItemRight: FC<{ item: IProjectItem }> = ({ item }) => (
 						<span>{item.old}</span>
 					</div>
 				</div>
+
 				<Button className='mt-7' variant='white'>
-					Смотреть курсы
+					<Link href='/courses'>Смотреть курсы</Link>
 				</Button>
 			</div>
 			<div className={styles.containerImage}>

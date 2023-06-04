@@ -13,10 +13,10 @@ interface ICardCourse {
 }
 
 export const CardCourse: React.FC<ICardCourse> = ({
-	item: { courseDurationMonth, desc, hoursInWeek, isOnline, name },
+	item: { courseDurationMonth, desc, hoursInWeek, isOnline, name, id },
 	className
 }) => (
-	<Link href='/'>
+	<Link href={`/courses/${id}`}>
 		<div className={cn(className, styles['card-course-wrapper'])}>
 			<Image alt='navigator' height={85} src='/icons/course-icon.svg' width={85} />
 			<h2>{name}</h2>

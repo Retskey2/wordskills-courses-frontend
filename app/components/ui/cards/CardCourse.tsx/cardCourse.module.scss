@@ -1,5 +1,5 @@
 .card-course-wrapper {
-    @apply flex flex-col cursor-pointer bg-transparent bg-white rounded gap-1 p-6;
+    @apply flex flex-col cursor-pointer bg-transparent bg-white rounded gap-1 p-6 h-fit;
     box-shadow: 12px 4px 100px rgba(0, 0, 0, 0.05);
     >h2 {
             @apply font-medium text-xl mt-6; 
@@ -11,7 +11,7 @@
         }
 
     >p {
-        @apply text-[#828282] text-justify;
+        @apply text-[#828282] text-justify line-clamp-5;
         }
 
     >ul {

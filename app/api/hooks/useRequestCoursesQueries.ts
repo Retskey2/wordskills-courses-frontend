@@ -4,7 +4,7 @@ import fetchPageCourses from '../requests/coursePageFetch';
 
 interface UseRequestCoursesQueriesParams {
 	// debounced search term for filter
-	debounedSearchValue: string;
+	debounedSearchValue?: string;
 
 	// page number to start from
 	page?: number;

@@ -74,10 +74,6 @@ const ContactFormTeachers: FC = () => {
 					error={errors.experience}
 					placeholder='Лет опыта работы экспертом*'
 				/>
-				<div className={styles.inputImage}>
-					<input accept='image/*' type='file' />
-					<Image src={attachIcon} />
-				</div>
 
 				<TextField {...register('info')} placeholder='Дополнительная информация' />
 

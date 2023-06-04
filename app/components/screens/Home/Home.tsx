@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { Meta } from 'utills/meta/Meta';
 
+import { useRequestCoursesQueries } from '@/api/hooks/useRequestCoursesQueries';
 import illustration from '@/assets/image/Illustration.svg';
 import arrow from '@/assets/image/Vector.svg';
 import book from '@/assets/image/book-icon.svg';
@@ -19,6 +20,7 @@ import LastNews from '@/components/ui/lastNews/LastNews';
 import SubHeading from '../../ui/Heading/SubHeading';
 
 import styles from './Home.module.scss';
+
 
 const Home: FC = () => (
 	<Meta description='Обучим вас нужными навыками' title='Главная'>

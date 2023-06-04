@@ -16,16 +16,20 @@ export const HeaderContent: IHeader = {
 			title: 'Преподаватели'
 		},
 		{
-			link: '/about',
-			title: 'О нас'
+			link: '/news',
+			title: 'Новости'
 		},
 		{
 			link: '/contacts',
 			title: 'Контакты'
 		},
 		{
-			link: '/documents',
-			title: 'Документы'
+			link: '/about',
+			title: 'О нас'
+		},
+		{
+			link: '/auth',
+			title: 'Войти'
 		}
 	]
 };

@@ -30,7 +30,7 @@ const AuthFields: FC<IAuthFields> = ({
 			/>
 			<Field
 				{...register(
-					'password',
+					'passwordHash',
 					isPasswordRequired
 						? {
 								required: 'password is required',

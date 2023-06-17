@@ -9,7 +9,7 @@ import { getAuthUrl } from '@/config/api.config';
 export const AuthService = {
     async register(email: string, passwordHash: string, login: string) {
         const response = await axiosClassic.post<IAuthResponse>(
-            getAuthUrl('/register'), 
+            getAuthUrl('register'), 
             {email, login, passwordHash}
         )
 

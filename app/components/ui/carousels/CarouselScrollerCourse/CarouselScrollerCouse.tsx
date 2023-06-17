@@ -3,11 +3,10 @@ import cn from 'classnames';
 import { KeenSliderOptions, useKeenSlider } from 'keen-slider/react';
 import React, { FC, useEffect, useState } from 'react';
 
-import { useRequestCoursesQueries } from '@/api/hooks/useRequestCoursesQueries';
-
 import { CardCourse } from '../../cards/CardCourse.tsx/cardCourse';
 import styles from '../Carousel.module.scss';
 
+import { useRequestCoursesQueries } from '@/api/hooks/useRequestCoursesQueries';
 
 export const CarouselScrollerCourse: FC = () => {
 	const { data } = useRequestCoursesQueries({ page: 1, take: 3 });
@@ -56,9 +55,9 @@ export const CarouselScrollerCourse: FC = () => {
 			</div>
 			{instanceRef.current && (
 				<div className={styles.dots}>
-					{[...Array(instanceRef.current.track.details.slides.length).keys()].map((idx) => (
+					{[...Array(instanceRef.current.track.details?.slides.length).keys()].map((idx) => (
 						<button
-							key={idx}
+							key={idx + Math.random()}
 							aria-label='change'
 							type='button'
 							className={cn(styles.dot, {

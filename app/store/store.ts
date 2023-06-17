@@ -1,14 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { combineReducers } from 'redux';
+import {configureStore} from '@reduxjs/toolkit'
+import { reducers } from './rootReducers';
 
-import searchReducer from './reducers/searchSlice';
-
-const rootReducer = combineReducers({
-	search: searchReducer
-});
 
 const store = configureStore({
-	reducer: rootReducer
+	reducer: reducers,
+    devTools: true
 });
 
 export type RootState = ReturnType<typeof store.getState>;

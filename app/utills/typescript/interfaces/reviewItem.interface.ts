@@ -8,6 +8,7 @@ export interface IInterviewItem {
 	score: NumberRange<1, 6>;
 	description: string;
 	image: string;
+	label: string;
 	client: {
 		age: number;
 		name: string;

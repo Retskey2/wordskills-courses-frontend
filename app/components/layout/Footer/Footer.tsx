@@ -53,9 +53,6 @@ const Footer: FC = () => (
 				<Link href='/'>Система обучения</Link>
 			</li>
 		</ul>
-		<div className={styles.logo}>
-			<Image alt='collegeIcon' src={collegeIcon} />
-		</div>
 	</div>
 );
 

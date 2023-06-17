@@ -4,6 +4,10 @@ export const HeaderContent: IHeader = {
 	title: 'IHeader',
 	items: [
 		{
+			link: '/',
+			title: 'Главная'
+		},
+		{
 			link: '/courses',
 			title: 'Курсы'
 		},
@@ -26,10 +30,6 @@ export const HeaderContent: IHeader = {
 		{
 			link: '/about',
 			title: 'О нас'
-		},
-		{
-			link: '/auth',
-			title: 'Войти'
 		}
 	]
 };

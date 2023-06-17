@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 
-const AuthPage: NextPage = () => <></>;
+import { Auth } from '@/components/screens/Auth/Auth';
+
+const AuthPage: NextPage = () => <Auth />;
 
 export default AuthPage;

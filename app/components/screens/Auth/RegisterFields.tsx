@@ -1,17 +1,28 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 import Field from '@/components/ui/form-elements/Field';
 
 import { IAuthFields } from './auth.interface';
 import { validEmail } from '@/utills/validate/regex';
 
-const AuthFields: FC<IAuthFields> = ({
+export const RegisterFields: FC<IAuthFields> = ({
 	register,
 	formState: { errors },
 	isPasswordRequired = false
 }) => {
 	return (
 		<>
+			<Field
+				{...register('login', {
+					required: 'login is required',
+					minLength: {
+						value: 6,
+						message: 'Min length should more 6 symbols'
+					}
+				})}
+				placeholder='login'
+				type='text'
+			/>
 			<Field
 				{...register('email', {
 					required: 'Email is required',
@@ -41,5 +52,3 @@ const AuthFields: FC<IAuthFields> = ({
 		</>
 	);
 };
-
-export default AuthFields;

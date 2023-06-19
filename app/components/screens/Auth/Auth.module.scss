@@ -1,18 +1,15 @@
 .wrapper {
-
 	> form {
-		@apply mx-auto w-1/2 air-block bg-opacity-80 p-7 text-center bg-white text-sm ;
+		@apply mx-auto w-1/2 air-block bg-opacity-80 p-7 text-center bg-white text-sm max-w-[540px];
 		.buttons {
-			@apply mt-12 ;
-
 			> button {
 				&:first-child {
-					@apply rounded-r-none;
+					@apply rounded-r-none w-full;
 				}
 
 				&:last-child {
 					@apply rounded-l-none opacity-80 hover:opacity-100 text-white transition-opacity;
-					background-color: #0048BA;
+					background-color: #0048ba;
 				}
 			}
 		}

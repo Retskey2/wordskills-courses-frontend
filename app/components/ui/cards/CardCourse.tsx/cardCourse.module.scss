@@ -1,25 +1,27 @@
 .card-course-wrapper {
     @apply flex flex-col cursor-pointer bg-transparent bg-white rounded gap-1 p-6 h-fit;
     box-shadow: 12px 4px 100px rgba(0, 0, 0, 0.05);
-    >h2 {
-            @apply font-medium text-xl mt-6; 
-        }
-
-
-    >span {
-        @apply text-[#0048BA] text-lg;
-        }
-
-    >p {
-        @apply text-[#828282] text-justify line-clamp-5;
-        }
-
-    >ul {
-            @apply text-[rgb(0,72,186)] flex justify-between;
-        }
-            &:hover {
-         	      box-shadow: 12px 4px 100px rgba(0, 0, 0.25, 0.25);
-                }
+    > h2 {
+        @apply font-medium text-xl mt-6;
     }
 
+    > span {
+        @apply text-[#0048BA] text-lg;
+    }
 
+    > p {
+        @apply text-[#828282] text-justify line-clamp-5 mb-2;
+    }
+
+    > ul {
+        @apply text-[rgb(0,72,186)] flex justify-between border-t-[1px] border-t-[#E0E0E0];
+
+        li {
+            @apply flex items-center gap-2 p-2;
+        }
+    }
+
+    &:hover {
+        box-shadow: 12px 4px 100px rgba(0, 0, 0.25, 0.25);
+    }
+}

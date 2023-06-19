@@ -19,7 +19,6 @@ import diploma from '@/assets/image/diploma-icon.svg';
 import SubHeading from '../../ui/Heading/SubHeading';
 
 import styles from './Home.module.scss';
-import { useRequestCoursesQueries } from '@/api/hooks/useRequestCoursesQueries';
 
 const Home: FC = () => (
 	<Meta description='Обучим вас нужными навыками' title='Главная'>

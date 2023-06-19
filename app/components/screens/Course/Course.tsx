@@ -8,6 +8,9 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs/Breadcrumbs';
 import { BreadcrumbProps } from '@/components/ui/Breadcrumbs/breadcrumbs.interface';
 import Button from '@/components/ui/Button/Button';
 
+import iconAntCalendar from '@/assets/icon/ant-calendar.svg';
+import iconAntClock from '@/assets/icon/ant-clock.svg';
+import iconAntDesktop from '@/assets/icon/ant-desktop.svg';
 import iconBackLogo from '@/assets/icon/course-back-icon.svg';
 
 import styles from './Course.module.scss';
@@ -46,9 +49,18 @@ export const Course = () => {
 						<div className='text-4xl font-medium'>{data?.name}</div>
 						<div className='text-2xl'>от {data?.price} ₽</div>
 						<ul className='mt-6 flex justify-between'>
-							<li>{data?.hoursInWeek}ч/нед</li>
-							<li>{data?.courseDurationMonth} месяцев</li>
-							<li>{data?.isOnline && 'Online'}</li>
+							<li className='flex items-center gap-2'>
+								<Image width={24} alt='clock' draggable={false} src={iconAntClock} />
+								<span>{data?.hoursInWeek}ч/нед</span>
+							</li>
+							<li className='flex items-center gap-2'>
+								<Image width={24} alt='clock' draggable={false} src={iconAntCalendar} />
+								<span>{data?.courseDurationMonth} месяцев</span>
+							</li>
+							<li className='flex items-center gap-2'>
+								<Image width={24} alt='clock' draggable={false} src={iconAntDesktop} />
+								<span>{data?.isOnline ? 'Online' : 'Offline'}</span>
+							</li>
 						</ul>
 					</div>
 				</div>

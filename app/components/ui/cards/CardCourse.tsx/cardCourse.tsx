@@ -3,9 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import { ICourse } from '@/utills/typescript/interfaces/course.interface';
+import iconAntCalendarBlue from '@/assets/icon/ant-calendar-blue.svg';
+import iconAntClockBlue from '@/assets/icon/ant-clock-blue.svg';
+import iconAntDesktopBlue from '@/assets/icon/ant-desktop-blue.svg';
 
 import styles from './cardCourse.module.scss';
+import { ICourse } from '@/utills/typescript/interfaces/course.interface';
 
 interface ICardCourse {
 	item: ICourse;
@@ -23,9 +26,18 @@ export const CardCourse: React.FC<ICardCourse> = ({
 			<span>Junior</span>
 			<p>{desc}</p>
 			<ul>
-				<li>{hoursInWeek}ч/нед</li>
-				<li>{courseDurationMonth}ч/нед</li>
-				<li>{isOnline && 'Online'}</li>
+				<li>
+					<Image width={16} alt='chalkboard' src={iconAntClockBlue} />
+					<span>{hoursInWeek}ч/нед</span>
+				</li>
+				<li>
+					<Image width={16} alt='chalkboard' src={iconAntCalendarBlue} />
+					<span>{courseDurationMonth} месяцев</span>
+				</li>
+				<li>
+					<Image width={16} alt='chalkboard' src={iconAntDesktopBlue} />
+					<span>{isOnline ? 'Online' : 'Offline'}</span>
+				</li>
 			</ul>
 		</div>
 	</Link>

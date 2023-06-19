@@ -1,7 +1,8 @@
 .footer {
-	@apply relative w-full flex justify-between py-16 px-24 h-[500px] bg-blue-500;
+	@apply relative  w-full flex justify-between py-8 px-24  bg-blue-500;
 
 	ul {
+	
 		li {
 			@apply mt-4 font-normal text-white;
 

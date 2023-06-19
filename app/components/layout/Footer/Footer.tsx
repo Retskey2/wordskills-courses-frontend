@@ -9,15 +9,6 @@ import styles from './Footer.module.scss';
 const Footer: FC = () => (
 	<div className={styles.footer}>
 		<ul>
-			<li>WorldSkills</li>
-			<li>
-				<Link href='/'>РКЦ Санкт-Петербург</Link>
-			</li>
-			<li>
-				<Link href='/'>РКЦ Юниоры Санкт-Петербург</Link>
-			</li>
-		</ul>
-		<ul>
 			<li>О нас</li>
 			<li>
 				<Link href='/'>Наши принципы</Link>

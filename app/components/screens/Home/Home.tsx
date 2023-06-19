@@ -2,12 +2,6 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { Meta } from 'utills/meta/Meta';
 
-import { useRequestCoursesQueries } from '@/api/hooks/useRequestCoursesQueries';
-import illustration from '@/assets/image/Illustration.svg';
-import arrow from '@/assets/image/Vector.svg';
-import book from '@/assets/image/book-icon.svg';
-import chalkboard from '@/assets/image/chalkboard-icon.svg';
-import diploma from '@/assets/image/diploma-icon.svg';
 import Button from '@/components/ui/Button/Button';
 import DirectionItem from '@/components/ui/DirectionItem/DirectionItem';
 import Heading from '@/components/ui/Heading/Heading';
@@ -16,11 +10,16 @@ import { CarouselScrollerReview } from '@/components/ui/carousels/CarouselScroll
 import ContactForm from '@/components/ui/forms/ContactForm/ContactForm';
 import LastNews from '@/components/ui/lastNews/LastNews';
 
+import illustration from '@/assets/image/Illustration.svg';
+import arrow from '@/assets/image/Vector.svg';
+import book from '@/assets/image/book-icon.svg';
+import chalkboard from '@/assets/image/chalkboard-icon.svg';
+import diploma from '@/assets/image/diploma-icon.svg';
 
 import SubHeading from '../../ui/Heading/SubHeading';
 
 import styles from './Home.module.scss';
-
+import { useRequestCoursesQueries } from '@/api/hooks/useRequestCoursesQueries';
 
 const Home: FC = () => (
 	<Meta description='Обучим вас нужными навыками' title='Главная'>
@@ -28,10 +27,8 @@ const Home: FC = () => (
 			<div className={styles.headBlock}>
 				<div className={styles.content}>
 					<div className={styles.label}>
-						<h1>WordSkills Education</h1>
-						<h2>
-							Школа подготовки по стандартам <br /> WorldSkills
-						</h2>
+						<h1>WorldSkills Education</h1>
+						<h2>Школа подготовки WorldSkills курсам</h2>
 						<Button variant='arrow'>
 							<span>Подробнее</span>
 							<Image alt='arrow' src={arrow} />

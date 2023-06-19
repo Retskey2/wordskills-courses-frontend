@@ -2,16 +2,17 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-import { useRequestCourseByIdQuery } from '@/api/hooks/useRequestCourseByIdQuery';
-import iconBackLogo from '@/assets/icon/course-back-icon.svg';
 import { WrapperContent } from '@/components/layout/WrapperContent';
 import Accordion from '@/components/ui/Accordion/Accordion';
 import Breadcrumbs from '@/components/ui/Breadcrumbs/Breadcrumbs';
 import { BreadcrumbProps } from '@/components/ui/Breadcrumbs/breadcrumbs.interface';
 import Button from '@/components/ui/Button/Button';
-import { Meta } from '@/utills/meta/Meta';
+
+import iconBackLogo from '@/assets/icon/course-back-icon.svg';
 
 import styles from './Course.module.scss';
+import { useRequestCourseByIdQuery } from '@/api/hooks/useRequestCourseByIdQuery';
+import { Meta } from '@/utills/meta/Meta';
 
 export const Course = () => {
 	const router = useRouter();
@@ -42,12 +43,12 @@ export const Course = () => {
 					</div>
 					<div className='mx-auto flex max-w-[500px] flex-col gap-2'>
 						<div>Дата начала: 01.04.2022</div>
-						<div className='text-4xl font-medium'>Веб-дизайн и разрабтка КОД 1.4</div>
-						<div className='text-2xl'>от 80 000 ₽</div>
+						<div className='text-4xl font-medium'>{data?.name}</div>
+						<div className='text-2xl'>от {data?.price} ₽</div>
 						<ul className='mt-6 flex justify-between'>
-							<li>4ч/нед</li>
-							<li>6 месяцев</li>
-							<li>Online</li>
+							<li>{data?.hoursInWeek}ч/нед</li>
+							<li>{data?.courseDurationMonth} месяцев</li>
+							<li>{data?.isOnline && 'Online'}</li>
 						</ul>
 					</div>
 				</div>

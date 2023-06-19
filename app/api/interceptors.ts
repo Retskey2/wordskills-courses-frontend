@@ -4,5 +4,7 @@ import { getContentType } from './api.helpers';
 
 export const axiosClassic = axios.create({
 	baseURL: `${process.env.APP_SERVER_URL}/api`,
-	headers: getContentType()
+	headers: getContentType(),
+	responseType: "json",
+    withCredentials: true,
 });

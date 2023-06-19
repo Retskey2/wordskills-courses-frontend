@@ -22,6 +22,7 @@ export const RegisterFields: FC<IAuthFields> = ({
 				})}
 				placeholder='login'
 				type='text'
+				error={errors.login}
 			/>
 			<Field
 				{...register('email', {
@@ -32,6 +33,7 @@ export const RegisterFields: FC<IAuthFields> = ({
 					}
 				})}
 				placeholder='E-Mail'
+				error={errors.email}
 			/>
 			<Field
 				{...register(
@@ -48,6 +50,7 @@ export const RegisterFields: FC<IAuthFields> = ({
 				)}
 				placeholder='password'
 				type='password'
+				error={errors.passwordHash}
 			/>
 		</>
 	);

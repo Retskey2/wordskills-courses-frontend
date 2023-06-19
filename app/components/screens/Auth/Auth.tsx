@@ -16,10 +16,7 @@ import { Meta } from '@/utills/meta/Meta';
 
 export const Auth = () => {
 	useAuthRedirect();
-
 	const { isLoading } = useAuth();
-
-	const [type, setType] = useState<'login' | 'register'>('login');
 	const [typeForm, setTypeForm] = useState<'login' | 'register'>('login');
 
 	const {
@@ -57,7 +54,7 @@ export const Auth = () => {
 
 						<div className='flex flex-col gap-2'>
 							<div className={styles.buttons}>
-								<Button type='submit' onClick={() => setType('login')} disabled={isLoading}>
+								<Button type='submit' onClick={() => setTypeForm('login')} disabled={isLoading}>
 									Отправить
 								</Button>
 							</div>

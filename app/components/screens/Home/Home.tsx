@@ -33,7 +33,7 @@ const Home: FC = () => (
 							<Image alt='arrow' src={arrow} />
 						</Button>
 					</div>
-					<div className='mt-36'>
+					<div className='mt-3 invisible md:visible'>
 						<Image alt='illustration' src={illustration} />
 					</div>
 				</div>

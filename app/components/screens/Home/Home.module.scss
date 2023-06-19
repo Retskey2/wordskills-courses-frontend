@@ -1,10 +1,10 @@
 .headBlock {
 	@apply image-like-bg grid items-center min-h-[875px] px-32 bg-no-repeat;
-	background: url('/backgrounds/background-main.jpg');
+	background: url("/backgrounds/background-main.jpg");
 	background-size: cover;
 
 	.content {
-		@apply grid m-auto items-center relative gap-3 justify-items-center w-full max-w-[1380px];
+		@apply grid m-auto items-center relative gap-8 justify-items-center w-full max-w-[1380px];
 		grid-template-columns: 1fr 1fr;
 
 		.label {

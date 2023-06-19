@@ -44,7 +44,10 @@ export const Auth = () => {
 			<WrapperContent>
 				<section className={styles.wrapper}>
 					<form onSubmit={handleSubmit(onSubmit)}>
-						<Heading title='Авторизация' className='mb-12' />
+						<Heading
+							title={typeForm === 'login' ? 'Авторизация' : 'Регистрация'}
+							className='mb-12'
+						/>
 
 						{typeForm === 'login' ? (
 							<AuthFields formState={formState} register={registerInput} isPasswordRequired />

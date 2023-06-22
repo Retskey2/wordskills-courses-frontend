@@ -7,6 +7,8 @@ import Accordion from '@/components/ui/Accordion/Accordion';
 import Breadcrumbs from '@/components/ui/Breadcrumbs/Breadcrumbs';
 import { BreadcrumbProps } from '@/components/ui/Breadcrumbs/breadcrumbs.interface';
 import Button from '@/components/ui/Button/Button';
+import { NoSSR } from '@/components/ui/NoSSR/NoSSR';
+import SubscriptionButton from '@/components/ui/SubscriptionButton/SubscriptionButton';
 
 import iconAntCalendar from '@/assets/icon/ant-calendar.svg';
 import iconAntClock from '@/assets/icon/ant-clock.svg';
@@ -15,12 +17,15 @@ import iconBackLogo from '@/assets/icon/course-back-icon.svg';
 
 import styles from './Course.module.scss';
 import { useRequestCourseByIdQuery } from '@/api/hooks/useRequestCourseByIdQuery';
+import { useAuth } from '@/utills/hooks/useAuth';
 import { Meta } from '@/utills/meta/Meta';
 
 export const Course = () => {
 	const router = useRouter();
+
 	const courseId = typeof router.query?.id === 'string' ? router.query.id : '';
 	const { data } = useRequestCourseByIdQuery({ courseId });
+	const { user } = useAuth();
 
 	const breadcrumbs: BreadcrumbProps[] = [
 		{
@@ -64,9 +69,7 @@ export const Course = () => {
 						</ul>
 					</div>
 				</div>
-				<Button className='mx-auto mt-6' variant='white'>
-					Записаться
-				</Button>
+				<NoSSR>{user && <SubscriptionButton courseId={courseId} />}</NoSSR>
 				<div className='my-6 text-[#828282]'>Описание</div>
 				<p className='text-justify'>{data?.desc}</p>
 				<div className='my-2 flex flex-col gap-2'>

@@ -1,9 +1,9 @@
 import cn from 'classnames';
-import { FC, PropsWithChildren } from 'react';
+import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react';
 
 import styles from './Button.module.scss';
 
-interface IButton {
+export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: 'white' | 'arrow' | 'outline';
 	className?: string;
 }

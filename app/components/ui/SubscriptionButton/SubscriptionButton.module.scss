@@ -1,0 +1,8 @@
+.button {
+@apply mt-6 flex mx-auto flex-row justify-center items-center py-3 px-6 gap-2 w-52 h-14 font-semibold text-blue-600 rounded cursor-pointer border-solid border-2 border-blue-600;
+}
+
+.smashed {
+	@apply bg-blue-600 text-white;
+}
+

@@ -74,6 +74,11 @@ const Header: FC<{ header: IHeader }> = ({ header: { items } }) => {
 										<li className='cursor-pointer' onClick={logout}>
 											Выйти
 										</li>
+										{user.isAdmin && (
+											<Link href='manage'>
+												<li className='cursor-pointer'>Админ панель</li>
+											</Link>
+										)}
 									</ul>
 								)}
 							</div>

@@ -74,7 +74,6 @@ module.exports = {
 			2,
 			{
 				groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-				'newlines-between': 'always',
 				pathGroups: [
 					{
 						pattern: '@/**',

@@ -20,7 +20,7 @@ export const RegisterFields: FC<IAuthFields> = ({
 						message: 'Min length should more 6 symbols'
 					}
 				})}
-				placeholder='login'
+				placeholder='Логин'
 				type='text'
 				error={errors.login}
 			/>
@@ -32,7 +32,7 @@ export const RegisterFields: FC<IAuthFields> = ({
 						message: 'Please enter a valid email address'
 					}
 				})}
-				placeholder='E-Mail'
+				placeholder='Почта'
 				error={errors.email}
 			/>
 			<Field
@@ -48,7 +48,7 @@ export const RegisterFields: FC<IAuthFields> = ({
 						  }
 						: {}
 				)}
-				placeholder='password'
+				placeholder='Пароль'
 				type='password'
 				error={errors.passwordHash}
 			/>

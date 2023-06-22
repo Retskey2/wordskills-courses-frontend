@@ -82,12 +82,9 @@ const Home: FC = () => (
 						Подготовка по самым популярным и актуальным направлениям 2022 года.
 					</SubHeading>
 				</div>
-				<div>
-					<CarouselScrollerReview />
-					<Button className='m-auto mt-8' variant='white'>
-						Оставить отзыв
-					</Button>
-				</div>
+
+				<CarouselScrollerReview />
+
 				<div className='m-auto py-24'>
 					<div>
 						<Heading center title='Подготовка по направлениям' />

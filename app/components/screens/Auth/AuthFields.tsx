@@ -20,7 +20,7 @@ const AuthFields: FC<IAuthFields> = ({
 						message: 'Please enter a valid email address'
 					}
 				})}
-				placeholder='E-Mail'
+				placeholder='Почта'
 				error={errors.email}
 			/>
 			<Field
@@ -36,7 +36,7 @@ const AuthFields: FC<IAuthFields> = ({
 						  }
 						: {}
 				)}
-				placeholder='password'
+				placeholder='Пароль'
 				type='password'
 				error={errors.passwordHash}
 			/>

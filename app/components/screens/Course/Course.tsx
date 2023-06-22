@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { WrapperContent } from '@/components/layout/WrapperContent';
 import Accordion from '@/components/ui/Accordion/Accordion';
@@ -16,15 +16,16 @@ import iconAntDesktop from '@/assets/icon/ant-desktop.svg';
 import iconBackLogo from '@/assets/icon/course-back-icon.svg';
 
 import styles from './Course.module.scss';
+import { useUpdateCountOpened } from './useUpdateCountOpened';
 import { useRequestCourseByIdQuery } from '@/api/hooks/useRequestCourseByIdQuery';
 import { useAuth } from '@/utills/hooks/useAuth';
 import { Meta } from '@/utills/meta/Meta';
 
 export const Course = () => {
 	const router = useRouter();
-
 	const courseId = typeof router.query?.id === 'string' ? router.query.id : '';
 	const { data } = useRequestCourseByIdQuery({ courseId });
+
 	const { user } = useAuth();
 
 	const breadcrumbs: BreadcrumbProps[] = [

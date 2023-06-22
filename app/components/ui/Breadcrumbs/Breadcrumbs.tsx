@@ -7,7 +7,7 @@ import styles from './Breadcrumbs.module.scss';
 import { BreadcrumbsProps } from './breadcrumbs.interface';
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ breadcrumbs }) => {
-	console.log(breadcrumbs);
+	
 	return (
 		<nav className={styles['breadcrumbs-container']}>
 			<ul>

@@ -5,7 +5,11 @@ import styles from './Accordion.module.scss';
 
 interface AccordionProps {
 	title: string;
-	contents: string[];
+	contents: {
+		title: string;
+
+		email: string;
+	}[];
 }
 
 const Accordion: React.FC<AccordionProps> = ({ title, contents }) => {
@@ -29,7 +33,8 @@ const Accordion: React.FC<AccordionProps> = ({ title, contents }) => {
 				<div className={styles['accordion-contents']}>
 					{contents.map((content, index) => (
 						<div key={index} className={styles.item}>
-							{content}
+							<span> {content.title}</span>
+							<span>{content.email}</span>
 						</div>
 					))}
 				</div>

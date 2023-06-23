@@ -11,4 +11,8 @@ export const UsersService = {
 		return axios.put<string>(getUsersUrl(`profile/subscription/${courseId}`))
 	},
 
+	async getCount() {
+		return axios.get<string>(getUsersUrl(`count`))
+	},
+
 }

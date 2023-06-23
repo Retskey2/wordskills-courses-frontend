@@ -75,7 +75,20 @@ export const Course = () => {
 				<p className='text-justify'>{data?.desc}</p>
 				<div className='my-2 flex flex-col gap-2'>
 					<Accordion
-						contents={['Content 1-1', 'Content 1-2', 'Content 1-3']}
+						contents={[
+							{
+								email: 'bashlovka96@mail.ru',
+								title: 'Башловка Руслан Борисович'
+							},
+							{
+								email: 'andreyMali@mail.ru',
+								title: 'Андрей Бережков Вячеславович'
+							},
+							{
+								email: 'sluxoi23@mail.ru',
+								title: 'Чапраков Андрей Борисович'
+							}
+						]}
 						title='Преподаватели'
 					/>
 				</div>

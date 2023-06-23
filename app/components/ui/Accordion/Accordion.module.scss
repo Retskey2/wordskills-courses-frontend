@@ -10,7 +10,7 @@
     .accordion-contents {
         @apply px-2;
         .item {
-            @apply p-4 bg-[#CCDAF1];
+            @apply p-4 bg-[#CCDAF1] flex justify-between;
 
             &:last-child {
                 @apply rounded-b-xl;

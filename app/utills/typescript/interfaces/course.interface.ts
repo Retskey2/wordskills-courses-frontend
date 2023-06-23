@@ -11,6 +11,7 @@ export interface ICourse {
 	name: string;
 	price: number;
 	priceDiscount: number;
+	countOpened: number;
 }
 
 export interface ICardCourses extends ICourse {

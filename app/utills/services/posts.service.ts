@@ -14,5 +14,13 @@ export const PostsService = {
 
 	async getPostById(id: number) {
 		return axiosClassic.get<IPost>(getPostsUrl(`${id}`))
-	}
+	},
+
+	async getPopular() {
+		return axiosClassic.get<IPost[]>(getPostsUrl(`most-popular`))
+	},
+
+	async updateCountOpened(id: number) {
+		return axiosClassic.put<string>(getPostsUrl(`update-count-opened/${id}`))
+	},
 }

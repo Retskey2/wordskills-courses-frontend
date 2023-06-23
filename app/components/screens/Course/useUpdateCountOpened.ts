@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 export const useUpdateCountOpened = (id: number) => {
     const { mutateAsync } = useMutation({
-        mutationKey: ['update count opened'],
+        mutationKey: ['update count opened', id],
         mutationFn: () => CourseService.updateCountOpened(id)
      }
     )

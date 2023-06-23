@@ -3,6 +3,6 @@ export interface IUser {
     login: string
     email: string
     password: string
-    createdAt: string
+    regDate: Date;
     isAdmin: boolean
 }

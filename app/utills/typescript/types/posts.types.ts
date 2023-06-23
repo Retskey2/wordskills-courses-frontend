@@ -5,6 +5,7 @@ export interface IPost {
     imgSrc: string;
     intro: string;
     createdAt: string;
+    countOpened: number;
     category: {
         id: number;
         name: string;

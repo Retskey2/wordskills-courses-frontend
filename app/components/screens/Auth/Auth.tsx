@@ -54,7 +54,7 @@ export const Auth = () => {
 
 						<div className='flex flex-col gap-2'>
 							<div className={styles.buttons}>
-								<Button type='submit' onClick={() => setTypeForm('login')} disabled={isLoading}>
+								<Button type='submit' onClick={() => onSubmit} disabled={isLoading}>
 									Отправить
 								</Button>
 							</div>

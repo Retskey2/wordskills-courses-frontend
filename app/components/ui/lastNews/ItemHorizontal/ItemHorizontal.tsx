@@ -14,7 +14,6 @@ interface IItemHorizontal {
 }
 
 const ItemHorizontal: FC<IItemHorizontal> = ({ image, description, title, id, isLoading }) => {
-	console.log(isLoading);
 	return (
 		<Link href={`news/${id}`}>
 			<div className={styles.itemHorizontal}>

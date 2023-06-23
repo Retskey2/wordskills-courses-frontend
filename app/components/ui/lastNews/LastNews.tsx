@@ -31,7 +31,7 @@ const dataNewsVertical = [
 
 const LastNews: FC<NewsProps> = ({ horizontal }) => {
 	const { posts, isLoading } = usePosts();
-	console.log(posts);
+
 	return (
 		<div className={styles.newsBlock}>
 			<section>

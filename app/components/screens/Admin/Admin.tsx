@@ -26,8 +26,6 @@ const Admin: FC = () => {
 	const { posts: popularPosts } = usePopularPosts();
 	const { data: AllCourse } = useRequestCoursesQueries({});
 
-	console.log(selectedOption);
-
 	const { data, isLoading } = useGetUsersByCourse(selectedOption);
 
 	const handleOptionChange = (event: any) => {

@@ -3,9 +3,8 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { IInterviewItem } from '@/utills/typescript/interfaces/reviewItem.interface';
-
 import styles from './CardReview.module.scss';
+import { IInterviewItem } from '@/utills/typescript/interfaces/reviewItem.interface';
 
 interface ICardReview {
 	item: IInterviewItem;
@@ -18,7 +17,7 @@ const CardReview: React.FC<ICardReview> = ({
 }) => (
 	<Link href='/'>
 		<div className={cn(className, styles['card-review-wrapper'])}>
-			<Image alt='photo' height={340} src={image} width={300} />
+			<Image alt='photo' objectFit='cover' height={340} src={image} width={300} />
 
 			<div className={styles['card-content']}>
 				<div className={styles['card-client']}>

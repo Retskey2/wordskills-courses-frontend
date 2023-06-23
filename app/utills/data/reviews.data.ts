@@ -4,23 +4,56 @@ export const dataReview: IInterviewItem[] = [
 	{
 		client: {
 			age: 27,
-			name: 'Алла'
+			name: 'Кирилл'
 		},
 		description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-		image: '/img/teacher-photo.png',
+			"Курсы по Java разработке для Android были просто потрясающими! Я получил все необходимые знания и навыки для создания своих собственных мобильных приложений. Благодаря прекрасной структуре курсов и четким объяснениям, я смог сразу приступить к разработке своего первого приложения.",
+		image: '/img/teacher-photo-1.jpg',
 		label: 'Чудесные преподаватели!',
 		score: 5
 	},
 	{
 		client: {
-			age: 27,
+			age: 22,
 			name: 'Алла'
 		},
 		description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+			"Машинное обучение с Python было великолепным курсом! Я узнал о различных алгоритмах и методах машинного обучения и научился применять их на практике с помощью Python. Преподаватели были очень компетентными и всегда готовы помочь.",
 		image: '/img/teacher-photo.png',
-		label: 'Чудесные преподаватели!',
+		label: 'Спасибо огромное!',
+		score: 5
+	},
+	{
+		client: {
+			age: 23,
+			name: 'Антон'
+		},
+		description:
+			"iOS разработка с Swift просто восхитительна! Я был поражен тем, как быстро я научился создавать свои собственные приложения для iPhone. Курсы были структурированы таким образом, что позволили мне шаг за шагом развиваться в разработке iOS-приложений.",
+		image: '/img/teacher-photo-2.jpg',
+		label: 'Обожаю swift',
+		score: 4
+	},
+	{
+		client: {
+			age: 18,
+			name: 'Будан'
+		},
+		description:
+			"Курс по разработке веб-приложений был исключительным. Я получил все необходимые знания по HTML, CSS и JavaScript, чтобы создавать красивые и функциональные веб-приложения. Благодаря множеству практических заданий, я мог сразу применять полученные знания на практике.",
+		image: '/img/teacher-photo-3.jpg',
+		label: 'За Нерзула!',
+		score: 5
+	},
+	{
+		client: {
+			age: 21,
+			name: 'Матвей'
+		},
+		description:
+			"Frontend разработка была интересной и практичной. Я освоил все необходимые навыки для создания современных и отзывчивых пользовательских интерфейсов. Уроки были структурированы логично, и я мог идти вперед, применяя новые знания на практике.",
+		image: '/img/teacher-photo-4.jpg',
+		label: 'Чудесные курсы!',
 		score: 4
 	},
 	{
@@ -29,42 +62,9 @@ export const dataReview: IInterviewItem[] = [
 			name: 'Алла'
 		},
 		description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-		image: '/img/teacher-photo.png',
-		label: 'Чудесные преподаватели!',
-		score: 4
-	},
-	{
-		client: {
-			age: 27,
-			name: 'Алла'
-		},
-		description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-		image: '/img/teacher-photo.png',
-		label: 'Чудесные преподаватели!',
-		score: 4
-	},
-	{
-		client: {
-			age: 27,
-			name: 'Алла'
-		},
-		description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-		image: '/img/teacher-photo.png',
-		label: 'Чудесные преподаватели!',
-		score: 4
-	},
-	{
-		client: {
-			age: 27,
-			name: 'Алла'
-		},
-		description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-		image: '/img/teacher-photo.png',
-		label: 'Чудесные преподаватели!',
+			"Backend разработка была очень информативной и полезной. Я научился создавать серверные приложения и работать с базами данных. Уроки были хорошо структурированы, и я получил ценные навыки для разработки надежных и масштабируемых веб-приложений.",
+		image: '/img/teacher-photo-5.jpeg',
+		label: 'Сижу в 6 утра с этими курсами!',
 		score: 4
 	}
 ];
